@@ -1,0 +1,113 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0"> Customers</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Catalog
+                            </li>
+                            <li class="breadcrumb-item">Customers
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="#" id="addcust"><i class="icon-cog3"></i> Add Customer</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                <div class="row" id="addcustomer" hidden>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Customers</h4>
+                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                    <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                              <div class="col-md-12">
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Customer Type </label>
+                                    <select class="custom-select form-control" id="custtype" >
+                                        <option value="">Select Customer Type</option>
+                                          <option value="company">Company</option>
+                                          <option value="person">Person</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Customer</label>
+                                    <select class="custom-select form-control" id="counerparty" >
+                                        <option value="">Select Customer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Customer Number</label>
+                                    <input type="text" class="form-control"  id="custnumber">
+                                </div>
+                                <div class="form-group" >
+                                      <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addcustbtn" >Save</button>
+                                      <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="closecustbtn" >Close</button>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                              </div>
+                        </div>
+
+                    <div class="row" id="customerscard">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Customers</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                      <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th></th>
+                                                <th>Customer Number</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="custtbody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

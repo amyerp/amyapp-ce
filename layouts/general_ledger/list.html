@@ -1,0 +1,172 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">General Ledger</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Accounting
+                            </li>
+                            <li class="breadcrumb-item">General Ledger
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="#"><i class="icon-cog3"></i> Add new Line</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="#" id="sumbalance"><i class="icon-cog3"></i> Sumarize Balance</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Filter</h4>
+                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                    <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content collapse show" >
+                        <div class="card-body">
+                            <div class="tab-content">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group" >
+                                        <label for="adrcountry">Year </label>
+                                        <select class="custom-select form-control" id="filteryear" name="location">
+                                            <option value="">Select Year</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group" >
+                                        <label for="adrcountry">Sort By </label>
+                                        <select class="custom-select form-control" id="sortby" name="location">
+                                            <option value="">Select Sort</option>
+                                            <option value="ASC">ASC</option>
+                                            <option value="DESC">DESC</option>
+                                          </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="form-group" id="countryselect">
+                                            <label for="adrcountry">From </label>
+                                            <input type="date" class="form-control" id="from">
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group" id="countryselect">
+                                            <label for="adrcountry">To </label>
+                                            <input type="date" class="form-control" id="to">
+                                        </div>
+                                      </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                            <div class="form-group" id="countryselect">
+                                                <label for="adrcountry">Show Flagged only </label>
+                                                <input type="checkbox" class="form-control" id="flag">
+                                            </div>
+                                          </div>
+                                          </div>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                            <button type="submit" class="btn btn-success" id="showgl"><i class="la la-check-square-o"></i> Show</button>
+                                          </div>
+                                          </div>
+                              </div>
+                              </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">General Ledger</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <smal>Find <span id="findrecords"></span> records</smal>
+                                    </div>
+                                <div class="tab-content">
+                                  <div class="table-responsive" id="gltable" >
+                                    <table class="table mb-0 table-striped restable"
+                                    id="gltableb"
+                                    data-height="450"
+                                    data-virtual-scroll="true"
+                                    data-resizable-columns-id="table"
+                                    data-resizable="false"
+                                    data-show-columns="true"
+                                    data-search="true"
+                                    data-show-toggle="true"
+                                    data-show-export="true"
+                                    data-export-types='["csv", "json", "excel", "doc", "sql", "png", "pdf"]'
+                                    data-export-options='{
+                                      "fileName": "general_ledger"
+                                      }'
+                                    data-row-attributes="glAttributes">
+                                        <thead>
+                                            <tr>
+                                                <th  data-sortable="true"  data-resizable-column-id="#">#</th>
+                                                <th data-field="Flag" data-formatter="flagFormatter" data-sortable="true"  data-resizable-column-id="flag">Flag</th>
+                                                <th data-field="Date" data-sortable="true"  data-resizable-column-id="date">Date</th>
+                                                <th data-field="Amount" data-sortable="true"  data-resizable-column-id="amount">Amount</th>
+                                                <th data-field="Soll" data-sortable="true"  data-resizable-column-id="soll">Soll</th>
+                                                <th data-sortable="true"  data-resizable-column-id="sollname">Soll Description</th>
+                                                <th data-field="Haben" data-sortable="true"  data-resizable-column-id="haben">Haben</th>
+                                                <th data-sortable="true"  data-resizable-column-id="habenname">Haben Description</th>
+                                                <th data-field="DocumentType" data-sortable="true"  data-resizable-column-id="doctype">Document type</th>
+                                                <th data-field="DocumentID" data-sortable="true"  data-resizable-column-id="docid">Document ID</th>
+                                                <th data-field="DocumentNumber" data-sortable="true"  data-resizable-column-id="docnum">Document Number</th>
+                                                <th data-field="Description" data-sortable="true"  data-resizable-column-id="desc">Description</th>
+                                                <th data-field="Comment" data-sortable="true"  data-resizable-column-id="comment">Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

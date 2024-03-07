@@ -1,0 +1,52 @@
+<div class="cryptorepeater" index="1">
+<div data-repeater-list="car">
+    <div data-repeater-item>
+<form action="#" class=" ">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group" id="ccurnamex" >
+                            <label for="cryptodesc">Description</label>
+                            <input type="text" class="form-control" name="paydesc"  id="paydesc">
+                        </div>
+                        <div class="form-group" id="ccurselect">
+                            <label for="ccurname">Currency </label>
+                            <select class="custom-select form-control"  name="ccur" required>
+                                <option value="">Select Currency</option>
+                                <option value="mca">MCA</option>
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                                <option value="hkd">HKD</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="ccurnamex"  required>
+                            <label for="ccurnametxt">Payment System</label>
+                            <input type="text" class="form-control" name="paysys">
+                        </div>
+
+                        </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="accnumber">Account ID</label>
+                        <input type="text" class="form-control" name="accid" >
+                    </div>
+                    <div class="form-group">
+                        <label for="accnumber">Link to Payment System</label>
+                        <input type="text" class="form-control" name="link" >
+                    </div>
+                    <div class="form-group">
+                        <label for="cryptocomment">Comment </label>
+                        <textarea name="paycomment" id="paycomment" rows="2" class="form-control"></textarea>
+                    </div>
+
+                      <div class="form-group col-sm-12 col-md-2 text-center mt-2">
+                      <button type="button" class="btn btn-danger" data-repeater-delete id="ccurdel"> <i class="ft-x"></i>Delete</button>
+                                                                  </div>
+                                                                  </div>
+                                                                  </div>
+</form>
+</div>
+</div>
+<button type="submit" class="btn btn-primary" id="paymantsave" ><i class="la la-check-square-o"></i> Save</button>
+  <button data-repeater-create class="btn btn-primary"><i class="ft-plus"></i> Add</button>
+  <button type="submit" class="btn btn-warning" id="paymantsyscancel"> Cancel</button>
+</div>

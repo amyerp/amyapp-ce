@@ -1,0 +1,75 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">My Accounts</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">My Accounts
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">My Accounts</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                    <table class="table mb-0 table-striped restable"
+                                    id="mycompaniestable"
+                                    data-height="450"
+                                    data-virtual-scroll="true"
+                                    data-resizable-columns-id="table"
+                                    data-resizable="false"
+                                    data-show-columns="true"
+                                    data-search="true"
+                                    data-show-toggle="true"
+                                    data-row-attributes="accountslistAttributes">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="" data-sortable="true"  data-resizable-column-id="#">#</th>
+                                                <th data-field="logo" data-formatter="companylogoFormatter" data-sortable="false"  data-resizable-column-id="logo"></th>
+                                                <th data-field="Name" data-sortable="true"  data-resizable-column-id="cname">Company Name</th>
+                                                <th data-field="AccountType" data-sortable="true"  data-resizable-column-id="cname">Type</th>
+                                                <th data-field="RegCountry" data-sortable="true"  data-resizable-column-id="regcountry">Registration Country</th>
+                                                <th data-field="BusinessNumber" data-sortable="true"  data-resizable-column-id="bname">Busines Number</th>
+                                                <th data-field="TaxNumber" data-sortable="true"  data-resizable-column-id="vat">Tax Number</th>
+                                                <th data-field="Activity" data-sortable="true"  data-resizable-column-id="activity">Activity</th>
+                                                <th data-field="CreatedAt" data-sortable="true"  data-resizable-column-id="created">Created</th>
+                                                <th data-field="UpdatedAt" data-sortable="true"  data-resizable-column-id="edited">Edited</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

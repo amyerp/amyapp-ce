@@ -1,0 +1,125 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Company Types</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Dictionary
+                            </li>
+                            <li class="breadcrumb-item">Company Types
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Add Company Type</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group" >
+                                        <label for="adrcountrytxt">Country </label>
+                                        <select class="custom-select form-control"  id="countryselect" >
+                                            <option value="">Select Country</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group" >
+                                        <label for="adrcountrytxt">Company Type </label>
+                                        <input type="text" class="form-control"  id="addnewct">
+                                    </div>
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addctbtn" >Save</button>
+                                      </div>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Company Types</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <h4 class="card-title">Country</h4>
+                                  <div class="tab-content">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0" width="100%">
+                                          <thead>
+                                              <tr>
+                                                  <th>ID</th>
+                                                  <th>Country</th>
+                                                  <th>Country Code</th>
+                                                  <th></th>
+                                              </tr>
+                                          </thead>
+                                          <tbody id="countrybody">
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <h4 class="card-title">Company Types</h4>
+                                  <div class="tab-content">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0" width="100%">
+                                          <thead>
+                                              <tr>
+                                                  <th>ID</th>
+                                                  <th>Company Types</th>
+                                                  <th></th>
+                                              </tr>
+                                          </thead>
+                                          <tbody id="ctbody">
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

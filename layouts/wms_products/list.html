@@ -1,0 +1,111 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Products</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Inventory
+                            </li>
+                            <li class="breadcrumb-item">Products
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/create_invoice"><i class="icon-cog3"></i> Create</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_outgoing_invoice"><i class="icon-cog3"></i> Import</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_outgoing_invoice"><i class="icon-cog3"></i> Filters</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Products</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="tab-content">
+                                  <smal>Find <span id="findrecords"></span> records: 15931</smal>
+                                  </div>
+                                <div class="tab-content">
+                                  <div class="table-responsive"  >
+                                    <div style="width:1500px;">
+                                      <table class="table mb-0 table-striped restable"
+                                        id="outinvoicestable"
+                                        data-height="450"
+                                        data-virtual-scroll="true"
+                                        data-resizable-columns-id="table"
+                                        data-resizable="true"
+                                        data-show-columns="true"
+                                        data-search="true"
+                                        data-show-toggle="true"
+                                        data-row-attributes="outinvoicesAttributes">
+                                        <thead >
+                                            <tr >
+                                                <th  data-field="#" data-sortable="true" data-resizable-column-id="#">#</th>
+                                                <th  >Image</th>
+                                                <th  data-field="Type" data-sortable="true" data-resizable-column-id="type">Reference</th>
+                                                <th data-field="Counterparty" data-sortable="true" data-resizable-column-id="cp">Name</th>
+                                                <th  data-field="Status"  data-sortable="true" data-resizable-column-id="status">Price</th>
+                                                <th  data-field="BillingDate" data-sortable="true" data-resizable-column-id="created">On Hand</th>
+                                              </tr>
+                                        </thead>
+                                        <tr >
+                                          <td>1</td>
+                                          <td><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"  height="100"></td>
+                                          <td>RE#34m5</td>
+                                          <td>Sofa</td>
+                                          <td>1512.56 USD</td>
+                                          <td></td>
+                                        </tr>
+                                        <tr >
+                                          <td>2</td>
+                                          <td><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2160&q=80"  height="100"></td>
+                                          <td>RE#342s4</td>
+                                          <td>Chair</td>
+                                          <td>154.12 USD</td>
+                                          <td></td>
+                                        </tr>
+                                        <tr >
+                                          <td>3</td>
+                                          <td><img src="https://images.unsplash.com/photo-1591935893481-4a5fa6671ec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"  height="100"></td>
+                                          <td>RE#215ns4</td>
+                                          <td>Chair</td>
+                                          <td>95.15 USD</td>
+                                          <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

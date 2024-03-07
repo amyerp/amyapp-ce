@@ -1,0 +1,116 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Steatments</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Journals
+                            </li>
+                            <li class="breadcrumb-item">Steatments
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <button class="btn btn-round btn-info mb-1" type="button" id="upnewstaetment"><i class="icon-cog3"></i> Upload Steatment</button>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body" >
+                <!-- Default styling start -->
+                    <div class="row" id="uploadsteatmentbody" hidden>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Upload new Steatments</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                            {{ partial "forms/uploadsteatment.html" . }}
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row" id="steatmentbody">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Steatments</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                  <div class="row">
+                                  <div class="col-md-4">
+                                  <div class="form-group"  >
+                                  <label for="cryptodesc">Type</label>
+                                  <select class="custom-select form-control" id="sttypeshow" name="location">
+                                      <option value="">Select Type</option>
+                                      <option value="bank">Bank Steatment</option>
+                                      <option value="broker">Broker Steatment</option>
+                                      <option value="crypto">Cryptocurrency steatment</option>
+                                      <option value="pg">Payment Gateway Steatment</option>
+                                  </select>
+                                  </div>
+
+                                </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group" >
+                                                    <label for="accnumber">Element</label>
+                                                    <select class="custom-select form-control" id="sttypeelementshow" name="location">
+                                                    <option value="">Select Element</option>
+                                                    </select>
+  </div>
+  </div>
+                                                <div class="col-md-4">
+                                                  <div class="form-group" >
+                                                    <button class="btn btn-round btn-info mb-1 mt-2" type="button" id="showsteatmentyears"><i class="icon-cog3"></i> Show Result</button>
+                                                </div>
+                                                <div>
+                                              </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="filestbody">
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

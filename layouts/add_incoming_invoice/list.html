@@ -1,0 +1,202 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Add Incoming Invoice, Proforma or Credit Note</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/incoming_invoices">Incoming Invoices</a>
+                  </li>
+                    <li class="breadcrumb-item active">Add Incoming Invoice , Proforma or Credit Note
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Add Incoming Invoice, Proforma or Credit Note <i class="la la-check-circle-o font-medium-3" style="color:green;" hidden id="compfinisheicon"></i></h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="invoiceform" >
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group" id="typeselect">
+                                    <label for="invoicetype">Type </label>
+                                    <select class="custom-select form-control" id="invoicetype" name="location">
+                                        <option value="">Select Document Type</option>
+                                        <option value="invoice">Invoice</option>
+                                        <option value="proforma">Proforma Invoice</option>
+                                        <option value="creditnote">Credit Note</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Received Date </label>
+                                    <input type="date" class="form-control" id="bildate" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Document Number </label>
+                                    <input type="text" class="form-control" id="invoicenum" >
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group" id="typeselect">
+                                      <label for="cur">Currency </label>
+                                      <select class="custom-select form-control" id="cur" name="location">
+                                          <option value="">Select Curency</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="typeselect">
+                                      <label for="counerparty">Counterparty Type</label>
+                                      <select class="custom-select form-control" id="counerpartytypeinoming" >
+                                          <option value="">Select Counterparty Type</option>
+                                          <option value="company">Company</option>
+                                          <option value="person">Person</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="counerpartyselect" hidden>
+                                      <label for="counerparty">Counterparty </label>
+                                      <select class="custom-select form-control" id="counerpartyincoming" >
+                                          <option value="">Select Counterparty</option>
+
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="basisselect" hidden>
+                                      <label for="counerpartyaddress">Basis of Document</label>
+                                      <select class="custom-select form-control" id="basis"  name="">
+                                          <option value="">Select Basis of Document</option>
+                                          <option value="tax">Taxes</option>
+                                          <option value="fees">Fees</option>
+                                          <option value="penalty">Penalty</option>
+                                          <option value="vat">VAT</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="bildate">Use Prepayment amount</label>
+                                      <input type="text" class="form-control" id="prepayment" >
+                                  </div>
+
+                                  </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group" id="typeselect">
+                                    <label for="description">Description </label>
+                                    <textarea name="commentc" id="description" rows="4" class="form-control"></textarea>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </div >
+                        <div class="row" id="invoicecontent" class="table-responsive" index="1">
+                          <div class="col-md-12">
+                        <div><h4>Invoice Content</h4></div>
+                        <div class="invoiceformrepeater">
+                        <div data-repeater-list="car">
+                        <div data-repeater-item>
+                          <form >
+                          <table class="table mb-0">
+         <thead>
+           <tr>
+             <th  >#</th>
+             <td class="indexcounter" name="text-input">1</td>
+             </tr>
+             <tr>
+             <th >Subscribtion</th>
+             <td ><input type="text" class="form-control " name="subscriptioninput"></td>
+           </tr>
+           <tr>
+             <th >Price</th>
+             <td ><input type="text" class="form-control priceclass" name="priceinput" ></td>
+           </tr>
+           <tr>
+              <th >Quantity</th>
+              <td ><input type="text" class="form-control priceclass" name="quantityinput" value="1"></td>
+            </tr>
+            <tr>
+              <th >Amount</th>
+              <td ><input type="text" class="form-control " name="amountinput" readonly></td>
+            </tr>
+            <tr>
+              <th >VAT %</th>
+              <td ><select class="custom-select form-control vatsel" name="vatpercentinput" id="selvatr" load="">
+                  <option value="0">Select VAT %</option>
+              </select></td>
+            </tr>
+            <tr>
+              <th >Total Amount</th>
+              <td ><input type="text" class="form-control " name="totamountinput" readonly></td>
+            </tr>
+            <tr>
+              <th >Is VAT paid in other EU country?</th>
+              <td ><input type="checkbox" class="form-control " name="iscomvat"></td>
+            </tr>
+            <tr>
+              <th >Period From</th>
+              <td ><input type="date" class="form-control " name="periodfrominput"></td>
+            </tr>
+            <tr>
+              <th >Period To</th>
+              <td ><input type="date" class="form-control " name="periodtoinput"></td>
+            </tr>
+            <tr>
+              <th >Soll</th>
+              <td ><fieldset class="position-relative has-icon-left">
+               <input type="text" class="form-control acccode" name="sollinput" readonly style="cursor:pointer;">
+              <div class="form-control-position">
+                 <i class="la la-plus-circle font-medium-4 acccode" style="cursor:pointer;"></i>
+               </div>
+             </fieldset></td>
+            </tr>
+            <tr>
+              <th >Haben</th>
+              <td ><fieldset class="position-relative has-icon-left">
+               <input type="text" class="form-control acccode" name="habeninput" readonly style="cursor:pointer;">
+              <div class="form-control-position">
+                 <i class="la la-plus-circle font-medium-4 acccode" style="cursor:pointer;"></i>
+               </div>
+             </fieldset></td>
+            </tr>
+            <tr>
+              <th ></th>
+              <td ><button type="button" class="btn btn-danger" data-repeater-delete id="ccurdel"> <i class="ft-x"></i>Delete</button></td>
+           </tr>
+         </thead>
+</table>
+</form>
+  </div>
+  </div>
+
+<div class="form-group overflow-hidden">
+    <div class="col-12">
+        <button data-repeater-create class="btn btn-primary"><i class="ft-plus"></i> Add</button>
+        </div>
+    </div>
+    </div>
+    <div class="float-right">
+    <button type="submit" class="btn btn-success" id="saveincominginvoice"><i class="la la-check-square-o"></i> Save</button>
+    </div>
+</div>
+</div>
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -1,0 +1,378 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Accountant Charts</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Dictionary
+                            </li>
+                            <li class="breadcrumb-item">Accountant Charts
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Add Chart Types</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+
+                            <div class="col-md-12">
+                              <div class="form-group" >
+                                  <label for="adrcountrytxt">Chart Type </label>
+                                  <input type="text" class="form-control"  id="addnewchart" placeholder="chart type">
+                              </div>
+                              <div class="form-group" >
+                                <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addchartbtn" >Add</button>
+
+                              </div>
+
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <div class="row" name="chart_category">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Add Chart Category</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Chart Type </label>
+                                      <select class="custom-select form-control" id="charttypecat" >
+                                          <option value="">Select Chart Type</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Category (English) </label>
+                                      <input type="text" class="form-control"  id="addcateng" >
+                                  </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group" >
+                                          <label for="adrcountrytxt">Language </label>
+                                          <select class="custom-select form-control" id="langcat" >
+                                              <option value="">Select Language</option>
+
+                                          </select>
+                                      </div>
+                                      <div class="form-group" >
+                                          <label for="adrcountrytxt">Category (Localizated)</label>
+                                          <input type="text" class="form-control"  id="addcatloc" >
+                                      </div>
+                                      <div class="form-group" >
+                                        <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addchartcatbtn" >Add</button>
+
+                                      </div>
+
+                                        </div>
+                                      </div>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row" name="chart_subcategory">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Add Chart SubCategory</h4>
+                                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                        <div class="heading-elements">
+                                            <ul class="list-inline mb-0">
+                                                <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                                <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group" >
+                                          <label for="adrcountrytxt">Chart Type </label>
+                                          <select class="custom-select form-control" id="charttypesubcat">
+                                              <option value="">Select Chart Type</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group" >
+                                          <label for="adrcountrytxt">Category</label>
+                                          <select class="custom-select form-control" id="catsubcat">
+                                              <option value="">Select Category</option>
+
+                                          </select>
+                                      </div>
+                                      <div class="form-group" >
+                                          <label for="adrcountrytxt">SubCategory (English) </label>
+                                          <input type="text" class="form-control"  id="addsubcateng" >
+                                      </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group" >
+                                              <label for="adrcountrytxt">Language </label>
+                                              <select class="custom-select form-control" id="langsubcat">
+                                                  <option value="">Select Language</option>
+
+                                              </select>
+                                          </div>
+                                          <div class="form-group" >
+                                              <label for="adrcountrytxt">Subcategory (Localizated)</label>
+                                              <input type="text" class="form-control"  id="addsubcatloc" >
+                                          </div>
+                                          <div class="form-group" >
+                                            <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addsubcatbtn" >Add</button>
+
+                                          </div>
+                                            </div>
+                                          </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" name="bwa_form">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Add BWA Form</h4>
+                                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                            <div class="heading-elements">
+                                                <ul class="list-inline mb-0">
+                                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                    <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                        <div class="col-md-12">
+                                          <div class="form-group" >
+                                              <label for="adrcountrytxt">Chart Type </label>
+                                              <select class="custom-select form-control" id="charttypebwaform">
+                                                  <option value="">Select Chart Type</option>
+                                              </select>
+                                          </div>
+                                          <div class="form-group" >
+                                              <label for="adrcountrytxt">Form</label>
+                                              <input type="text" class="form-control"  id="addbwaform" >
+                                          </div>
+                                          <div class="form-group" >
+                                              <label for="adrcountrytxt">Accounting Method</label>
+                                              <input type="text" class="form-control"  id="addacmethod" >
+                                          </div>
+                                          <div class="form-group" >
+                                            <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addbwaformbtn" >Add</button>
+
+                                          </div>
+                                            </div>
+
+                                              </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                              <div class="row" name="bwa_group">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Add BWA Group</h4>
+                                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                                <div class="heading-elements">
+                                                    <ul class="list-inline mb-0">
+                                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                            <div class="col-md-12">
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">BWA Form</label>
+                                                  <select class="custom-select form-control" id="bwafromsel">
+                                                      <option value="">Select BWA Form</option>
+
+                                                  </select>
+                                              </div>
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">Group Code</label>
+                                                  <input type="text" class="form-control"  id="addbwagroupcode" >
+                                              </div>
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">Group Name</label>
+                                                  <input type="text" class="form-control"  id="addbwagroupname" >
+                                              </div>
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">Chart account From</label>
+                                                  <input type="text" class="form-control"  id="addbwagroupfrom"  >
+                                              </div>
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">Chart account to</label>
+                                                  <input type="text" class="form-control"  id="addbwagroupto" >
+                                              </div>
+                                              <div class="form-group" >
+                                                  <label for="adrcountrytxt">Comment</label>
+                                                  <input type="text" class="form-control"  id="addbwagroupcomment" >
+                                              </div>
+                                              <div class="form-group" >
+                                                <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addbwagroupbtn" >Add</button>
+
+                                              </div>
+                                                </div>
+
+                                                  </div>
+                                                  </div>
+                                            </div>
+                              </div>
+                              <div class="row" name="chart_account">
+                                  <div class="card">
+                                      <div class="card-header">
+                                          <h4 class="card-title">Add Chart Account</h4>
+                                          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                          <div class="heading-elements">
+                                              <ul class="list-inline mb-0">
+                                                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                  <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="form-group" >
+                                            <label for="adrcountrytxt">Chart Type </label>
+                                            <select class="custom-select form-control" id="charttypeacc">
+                                                <option value="">Select Chart Type</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="adrcountrytxt">Category</label>
+                                            <select class="custom-select form-control" id="catacc">
+                                                <option value="">Select Category</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="adrcountrytxt">Sub Category </label>
+                                            <select class="custom-select form-control" id="subcatacc">
+                                                <option value="">Select Sub Category</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="adrcountrytxt">Account</label>
+                                            <input type="text" class="form-control"  id="addaccount" >
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="adrcountrytxt">Account Name (English)</label>
+                                            <input type="text" class="form-control"  id="addaccountnameeng" >
+                                        </div>
+
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group" >
+                                                <label for="adrcountrytxt">Language </label>
+                                                <select class="custom-select form-control" id="langacc">
+                                                    <option value="">Select Language</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group" >
+                                                <label for="adrcountrytxt">Account Name (Localizated)</label>
+                                                <input type="text" class="form-control"  id="addaccnameloc" >
+                                            </div>
+                                            <div class="form-group" >
+                                                <label for="adrcountrytxt">Comment</label>
+                                                <input type="text" class="form-control"  id="addacccoment" >
+                                            </div>
+                                            <div class="form-group" >
+                                              <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addaccbtn" >Add</button>
+
+                                            </div>
+
+
+                                              </div>
+                                            </div>
+                                            </div>
+                                      </div>
+                                  </div>
+
+
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Chart Categories</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                      <div class="table-responsive">
+                                          <table class="table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Category (English)</th>
+                                                    <th >Category <span id="catloc"></span></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="datatbody">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                      </div>
+                                      </div>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

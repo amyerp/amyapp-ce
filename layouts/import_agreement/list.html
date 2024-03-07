@@ -1,0 +1,207 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Import Agreement</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/agreements">Agreements</a>
+                  </li>
+                    <li class="breadcrumb-item active">Import Agreement
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Import Agreement </h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="agreementform" >
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group" id="typeselect">
+                                    <label for="invoicetype">Type </label>
+                                    <select class="custom-select form-control" id="doctype" >
+                                        <option value="">Select Document Type</option>
+                                        <option value="agreement">Agreement</option>
+                                        <option value="offerta">Offer</option>
+                                        <option value="public_offerta">Public Offer</option>
+                                        <option value="apendix">Appendix to Agreement</option>
+                                        <option value="law">Law</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="invoicetype">Category </label>
+                                    <select class="custom-select form-control" id="category" >
+                                        <option value="">Select Category</option>
+                                        <option value="sales">Sales</option>
+                                        <option value="employee">Employee</option>
+                                        <option value="loan">Loan</option>
+                                        <option value="law">Law</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="agreementselect" hidden>
+                                    <label for="selagreement">Agreement </label>
+                                    <select class="custom-select form-control" id="selagreement" >
+                                        <option value="">Select Agreement</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Sign Date </label>
+                                    <input type="date" class="form-control" id="signdate" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Document Number </label>
+                                    <input type="text" class="form-control" id="docenum" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Mark as Active</label>
+                                    <input type="checkbox" class="form-control" id="cbactive" >
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                  <div class="form-group" >
+                                      <label for="counerparty">Counterparty Type</label>
+                                      <select class="custom-select form-control" id="agrcounerpartytype" >
+                                          <option value="">Select Counterparty Type</option>
+                                          <option value="company">Company</option>
+                                          <option value="person">Person</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="counerpartyselect" hidden>
+                                      <label for="counerparty">Counterparty </label>
+                                      <select class="custom-select form-control" id="counerparty" >
+                                          <option value="">Select Counterparty</option>
+
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="counerpartyemail" hidden>
+                                      <label for="counerparty">Billing Email </label>
+                                      <select class="custom-select form-control" id="selectcounerpartyemail" >
+                                          <option value="">Select Billing Email</option>
+                                      </select>
+                                  </div>
+
+
+                                    <div class="form-group" >
+                                        <label for="counerparty">Customer Type</label>
+                                        <select class="custom-select form-control" id="customertype" >
+                                            <option value="">Select Customer Type</option>
+                                            <option value="company">Company</option>
+                                            <option value="person">Person</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group" id="cusptomerselect" hidden>
+                                        <label for="counerparty">Customer </label>
+                                        <select class="custom-select form-control" id="cusptomerse" >
+                                            <option value="">Select Customery</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bildate">Agreement Start Date</label>
+                                        <input type="date" class="form-control" id="startdate" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bildate">Agreement End Date</label>
+                                        <input type="date" class="form-control" id="enddate" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Soll</label>
+                                    <fieldset class="position-relative has-icon-left">
+                                       <input type="text" class="form-control acccode" name="sollinput" id="sollinput" readonly style="cursor:pointer;">
+                                      <div class="form-control-position">
+                                         <i class="la la-plus-circle font-medium-4 acccode" style="cursor:pointer;"></i>
+                                       </div>
+                                     </fieldset>
+                                    </div>
+                                    <div class="form-group">
+                                      <label >Haben</label>
+                                      <fieldset class="position-relative has-icon-left">
+                                       <input type="text" class="form-control acccode" name="habeninput" id="habeninput" readonly style="cursor:pointer;">
+                                      <div class="form-control-position">
+                                         <i class="la la-plus-circle font-medium-4 acccode" style="cursor:pointer;"></i>
+                                       </div>
+                                     </fieldset>
+                                    </div>
+
+                                  </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group" >
+                                    <label for="docname">Document Name </label>
+                                    <input type="text" class="form-control" id="docname" >
+                                  </div>
+                              </div>
+                            </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group" id="typeselect">
+                                    <label for="description">Description </label>
+                                    <textarea  id="description" rows="4" class="form-control"></textarea>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group" id="typeselect">
+                                      <label for="description">Comment </label>
+                                      <textarea  id="commentc" rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                              </div>
+
+                        </div >
+
+<div class="row">
+  <div class="col-md-12">
+<div class="float-right">
+<button type="submit" class="btn btn-success" id="saveimportagreement"><i class="la la-check-square-o"></i> Save</button>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+        <div class="form-group">
+        <form action="#" class="dropzone dropzone-area" id="importagreement" hidden>
+            <div class="dz-message">Drop Files Here To Upload</div>
+        </form>
+          </div>
+          </div>
+            <div class="col-md-12">
+          <div class="form-group" >
+            <div class="float-right">
+            <button type="submit" class="btn btn-success" id="doneagreemnt" hidden><i class="la la-check-square-o"></i> Done</button>
+            </div>
+            </div>
+    </div>
+  </div>
+
+
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

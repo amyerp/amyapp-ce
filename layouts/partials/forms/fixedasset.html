@@ -1,0 +1,145 @@
+<form action="#" class="faformwizard wizard-circle">
+
+                <!-- Step 1 -->
+                <h6><i class="step-icon la la-home"></i> Fixed Asset Type</h6>
+                <fieldset>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <select class="custom-select form-control" id="fatypesel"  name="" required>
+                                    <option value="">Select Fixed Asset Type*</option>
+                                    <option value="car">Car</option>
+                                    <option value="custom">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- Step 2 -->
+                <h6><i class="step-icon la la-pencil"></i>General Details</h6>
+                <fieldset>
+                    <div class="row" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="companyname">Branch :</label>
+                                <input type="text" class="form-control" id="companybranch" >
+                            </div>
+                                <div class="form-group">
+                                  <label for="indate">Incoming Date :</label>
+                                  <input type="date" class="form-control" id="indate" >
+                                </div>
+                            <div class="form-group">
+                              <label for="outdate">Leave Date :</label>
+                              <input type="date" class="form-control" id="outdate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="commentadr">Comment :</label>
+                                <textarea name="commentc" id="comment" rows="6" class="form-control"></textarea>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="csize">Currency:</label>
+                              <select class="custom-select form-control" id="cur" name="location">
+                                  <option value="">Select Currency</option>
+
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="price">Bought Price:</label>
+                              <input type="text" class="form-control" id="price">
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Amortisation Period (years):</label>
+                              <input type="text" class="form-control" id="amperiod">
+                          </div>
+                          <div class="form-group">
+                              <label for="commentadr">Description :</label>
+                              <textarea name="commentc" id="description" rows="6" class="form-control"></textarea>
+                          </div>
+
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- Step 3 -->
+                <h6><i class="step-icon la la-pencil"></i>Fixed Assets Details</h6>
+                <fieldset>
+                    <div class="row myhidden" id="typecar" hidden>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="vin">VIN:</label>
+                              <input type="text" class="form-control" id="vin">
+                          </div>
+                          <div class="form-group">
+                              <label for="manufacturer">Manufacturer :</label>
+                              <input type="text" class="form-control" id="manufacturer">
+                          </div>
+                          <div class="form-group">
+                            <label for="model">Model:</label>
+                              <input type="text" class="form-control" id="model">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+
+                          <div class="form-group">
+                            <label for="year">Issued (year):</label>
+                              <input type="text" class="form-control" id="year">
+                          </div>
+                          <div class="form-group">
+                            <label for="pnumber">Plate number:</label>
+                              <input type="text" class="form-control" id="pnumber">
+                          </div>
+                          <div class="form-group">
+                            <label for="fueltype">Fuel Type:</label>
+                              <input type="text" class="form-control" id="fueltype">
+                          </div>
+                          <div class="form-group">
+                            <label for="sdate">Service Date:</label>
+                              <input type="date" class="form-control" id="sdate">
+                          </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row myhidden" id="typecustom" hidden>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="fatype">Type:</label>
+                              <input type="text" class="form-control" id="fatype">
+                          </div>
+
+                          <div class="form-group">
+                              <label for="manufacturer">Manufacturer :</label>
+                              <input type="text" class="form-control" id="manufacturer">
+                          </div>
+                          <div class="form-group">
+                            <label for="model">Model:</label>
+                              <input type="text" class="form-control" id="model">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="sn">SN:</label>
+                              <input type="text" class="form-control" id="sn">
+                          </div>
+                          <div class="form-group">
+                            <label for="year">Issued (year):</label>
+                              <input type="text" class="form-control" id="year">
+                          </div>
+
+
+
+                        </div>
+                    </div>
+
+                </fieldset>
+
+</form>

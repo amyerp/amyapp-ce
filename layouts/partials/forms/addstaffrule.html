@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-6">
+    <div class="form-group" id="ccurnamex" >
+    <label for="cryptodesc">Description</label>
+    <input type="text" class="form-control"  id="ruledesc">
+    </div>
+    <div class="form-group" id="ccurnamex" >
+    <label for="brokernmae">Department</label>
+    <input type="text" class="form-control"  id="ruledep">
+    </div>
+    <div class="form-group" id="ccurnamex" >
+    <label for="brokernmae">Staff Number in Department</label>
+    <input type="text" class="form-control"  id="rulenum">
+    </div>
+    <div class="form-group">
+    <label for="cryptocomment">Comment </label>
+    <textarea name="brokercomment" id="rulecomment" rows="2" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label for="accnumber">Payment For</label>
+    <select class="custom-select form-control"  id="payfor" required>
+        <option value="">Select For Whom this payment</option>
+        <option value="staff">Staff</option>
+        <option value="company">Company</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="accnumber">Payment Type</label>
+    <select class="custom-select form-control"  id="paytype" required>
+        <option value="">Select Payment Type</option>
+        <option value="percent">Percent form Salary</option>
+        <option value="amount">Absolute Amount</option>
+    </select>
+    </div>
+    <div class="form-group"  >
+    <label for="brokernmae">Amount</label>
+    <input type="text" class="form-control"  id="ruleamount">
+    </div>
+
+    <div class="form-group col-sm-12 col-md-2 text-center mt-2">
+    <button type="button" class="btn btn-secondary" id="saverule"> Save </button>
+    </div>
+    <div class="form-group col-sm-12 col-md-2 text-center mt-2">
+    <button type="button" class="btn btn-secondary" id="rulecancel"> Close</button>
+    </div>
+    </div>
+</div>

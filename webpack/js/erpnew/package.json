@@ -1,0 +1,26 @@
+{
+  "name": "gufo",
+  "version": "1.0.0",
+  "description": "Gufo JS package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "webpack --mode=development ",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch"
+  },
+  "author": "Alexey Yanchenko",
+  "license": "MyMates GmbH",
+  "devDependencies": {
+    "jquery": "^3.5.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "mini-css-extract-plugin": "^0.11.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "mini-css-extract-plugin": "^0.11.2"
+  }
+}

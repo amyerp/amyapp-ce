@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ "<!-- BEGIN: Forgot -->" | safeHTML }}
+<section class="section invisible" id="forgotpage">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+<div class="mb-4 text-center" ><h1>{{ i18n "erp_title" | safeHTML }}</h1></div>
+      <div id="serveranswer" class="text-center"></div>
+        <form class="form-signin text-center" id="forgotform">
+      <h1 class="h3 mb-3 font-weight-normal">Restore your password</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="emailoruser" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputCode" class="sr-only invisible " id="forinputCode" style="displau">Code</label>
+      <input type="emailoruser" id="inputCode"  class="form-control invisible" placeholder="Code" required autofocus>
+      <div class="btn btn-lg btn-primary btn-block mt-1"  id="restorebtn">Restore</div>
+    </form>
+      <div class="mt-2 text-center"> <a href="{{ "/" | absLangURL }}">Sign In</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- END: Forgot -->" | safeHTML }}
+
+{{ end }}

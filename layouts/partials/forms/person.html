@@ -1,0 +1,190 @@
+<form action="#" class="personformwizard wizard-circle">
+
+                <!-- Step 1 -->
+                <h6><i class="step-icon la la-pencil"></i>Person Details</h6>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="titlesel">Title</label>
+                              <select class="custom-select form-control" id="titlesel" name="location" >
+                                  <option value="">Select Title</option>
+                                  <option value="mr">Mr.</option>
+                                  <option value="mrs">Mrs.</option>
+                                  <option value="ms">Ms.</option>
+                                  <option value="dr">Dr.</option>
+                              </select>
+                          </div>
+                            <div class="form-group">
+                                <label for="surname">Surname* :</label>
+                                <input type="text" class="form-control" id="surname" required>
+                            </div>
+                                <div class="form-group">
+                                  <label for="pname">Name* :</label>
+                                  <input type="text" class="form-control" id="pname" required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="mname">Middle Name :</label>
+                                  <input type="text" class="form-control" id="mname" >
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="suffix">Suffix :</label>
+                              <input type="text" class="form-control" id="suffix">
+                          </div>
+                          <div class="form-group">
+                              <label for="bd">Birth Date :</label>
+                              <input type="date" class="form-control" id="bd">
+                          </div>
+                          <div class="form-group">
+                              <label for="cb">Country of Birth:</label>
+                              <select class="custom-select form-control" id="cb" name="location">
+                                  <option value="">Select Country</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="cib">City of Birth:</label>
+                              <select class="custom-select form-control" id="cib" name="location">
+                                  <option value="">Select City</option>
+                              </select>
+                          </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <!-- Step 2 -->
+                <h6><i class="step-icon la la-image"></i>Documents Info</h6>
+                <fieldset>
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sex">Sex :</label>
+                            <input type="text" class="form-control" id="sex">
+                        </div>
+                        <div class="form-group">
+                            <label for="cit">Citizenship :</label>
+                            <select class="custom-select form-control" id="cit" name="location">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doct">Document Type :</label>
+                            <input type="text" class="form-control" id="doct">
+                        </div>
+                        <div class="form-group">
+                            <label for="docn">Document Number :</label>
+                            <input type="text" class="form-control" id="docn">
+                        </div>
+
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="iss">Issued :</label>
+                            <input type="date" class="form-control" id="iss">
+                        </div>
+                        <div class="form-group">
+                            <label for="exp">Expired :</label>
+                            <input type="date" class="form-control" id="exp">
+                        </div>
+                        <div class="form-group">
+                            <label for="tred">Tax Residence :</label>
+                            <select class="custom-select form-control" id="tred" name="location">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tid">Tax ID :</label>
+                            <input type="text" class="form-control" id="tid">
+                        </div>
+                      </div>
+                        </div>
+                </fieldset>
+                <!-- Step 3 -->
+                <h6><i class="step-icon la la-image"></i>Contact Details</h6>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="occ">Ocupation :</label>
+                              <input type="text" class="form-control" id="occ">
+                          </div>
+                          <div class="form-group">
+                              <label for="comp">Company :</label>
+                              <input type="text" class="form-control" id="comp">
+                          </div>
+                          <div class="form-group">
+                              <label for="dep">Department :</label>
+                              <input type="text" class="form-control" id="dep">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="commentp">Comment </label>
+                              <textarea name="commentc" id="commentp" rows="6" class="form-control"></textarea>
+                          </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <h6><i class="step-icon la la-image"></i>Address</h6>
+                <fieldset>
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group" id="countrytext" >
+                            <label for="adrcountrytxt">Country :</label>
+                            <select class="custom-select form-control" id="adrcountry" name="location">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ct">City :</label>
+                            <select class="custom-select form-control" id="ct" name="location">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area :</label>
+                            <input type="text" class="form-control" id="area">
+                        </div>
+                        <div class="form-group">
+                            <label for="st">Street :</label>
+                            <input type="text" class="form-control" id="st">
+                        </div>
+                        <div class="form-group">
+                            <label for="hs">House :</label>
+                            <input type="text" class="form-control" id="hs">
+                        </div>
+                        <div class="form-group">
+                            <label for="blg">Building :</label>
+                            <input type="text" class="form-control" id="blg">
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="of">Office :</label>
+                            <input type="text" class="form-control" id="of">
+                        </div>
+                        <div class="form-group">
+                            <label for="fl">Floor :</label>
+                            <input type="text" class="form-control" id="fl">
+                        </div>
+                        <div class="form-group">
+                            <label for="pcode">Post Code :</label>
+                            <input type="text" class="form-control" id="pcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="desc">Description :</label>
+                            <input type="text" class="form-control" id="desc" readonly value="Registration">
+                        </div>
+                        <div class="form-group">
+                            <label for="commentadr">Comment :</label>
+                            <textarea name="commentc" id="commentadr" rows="6" class="form-control"></textarea>
+                        </div>
+                      </div>
+                  </div>
+
+                </fieldset>
+</form>

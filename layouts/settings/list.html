@@ -1,0 +1,75 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0"> Settings</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Settings
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Settings</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content content">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="form-group" i>
+<input type="checkbox" class="js-switch" id="daynight" /><label for="switchery" class="font-medium-2 text-bold-600 ml-1">Night Mode</label>
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="invoicetype">Date Format</label>
+                                      <select class="custom-select form-control" id="dateformat" name="location">
+                                          <option value="">Select Date Format</option>
+                                          <option value="2006-01-02">yyyy-MM-dd</option>
+                                          <option value="20060102">yyyyMMdd</option>
+                                          <option value="January 02, 2006">January 02, 2006</option>
+                                          <option value="02 January 2006">02 January 2006</option>
+                                          <option value="02-Jan-2006">02-Jan-2006</option>
+                                          <option value="01/02/06">MM/dd/yy</option>
+                                          <option value="01/02/2006">MM/dd/yyyy</option>
+                                          <option value="010206">MMddyy</option>
+                                          <option value="Jan-02-06">Jan-02-06</option>
+                                          <option value="Jan-02-2006">Jan-02-2006</option>
+                                      </select>
+                                      <div >
+                                      <button type="submit" class="btn btn-success" id="updatedateformat"><i class="la la-check-square-o"></i> Update</button>
+                                      </div>
+                                  </div>
+                                  </div></div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

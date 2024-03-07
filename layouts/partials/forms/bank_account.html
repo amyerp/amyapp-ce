@@ -1,0 +1,68 @@
+<div class="bankrepeater" index="1">
+<div data-repeater-list="car">
+    <div data-repeater-item>
+<form action="#" class=" ">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="bankdesc">Description </label>
+                            <input type="text" class="form-control" name="bankdesc">
+                        </div>
+                        <div class="form-group">
+                            <label for="bnxxx">Bank Name </label>
+                            <input type="text" class="form-control" name="bnxxx">
+                        </div>
+                        <div class="form-group" id="curselect">
+                            <label for="cursel">Currency </label>
+                            <select class="custom-select form-control" name="cursel" name="location">
+                                <option value="">Select Currency</option>
+                                <option value="mlt">Muli</option>
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="curtxthid" hidden>
+                            <label for="curtxt">Currency</label>
+                            <input type="text" class="form-control" name="curtxt">
+                        </div>
+                        <div class="form-group">
+                            <label for="iban">IBAN</label>
+                            <input type="text" class="form-control" name="iban">
+                        </div>
+                        <div class="form-group">
+                            <label for="acn">Account number</label>
+                            <input type="text" class="form-control" name="acn">
+                        </div>
+                        </div>
+                      <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="bic">SWIFT / BIC</label>
+                            <input type="text" class="form-control" name="bic">
+                        </div>
+                        <div class="form-group">
+                            <label for="bankcode">Bank Code<code></code></label>
+                            <input type="text" class="form-control" name="bankcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch">Branch </label>
+                            <input type="text" class="form-control" name="branch">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bankcomment">Comment</label>
+                            <textarea name="bankcomment" name="commentbc" rows="6" class="form-control"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-danger mb-2" data-repeater-delete id="ccurdel"> <i class="ft-x"></i>Delete</button>
+                      </div>
+                  </div>
+
+                  </form>
+                </div>
+                </div>
+
+                  <button type="submit" class="btn btn-primary" id="banksave" ><i class="la la-check-square-o"></i> Save</button>
+                  <button type="submit" class="btn btn-primary" id="banksaveperson" hidden><i class="la la-check-square-o"></i> Save</button>
+                    <button data-repeater-create class="btn btn-primary"><i class="ft-plus"></i> Add</button>
+                    <button type="submit" class="btn btn-warning" id="bankcancel"> Cancel</button>
+                  </div>

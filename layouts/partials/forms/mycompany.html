@@ -1,0 +1,374 @@
+<form action="#" class="mycompanyformwizard wizard-circle">
+
+                <!-- Step 1 -->
+                <h6><i class="step-icon la la-home"></i> Registration Country</h6>
+                <fieldset>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <select class="custom-select form-control" id="mcloc" name="" required>
+                                    <option value="">Select Registration Country*</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- Step 2 -->
+                <h6><i class="step-icon la la-pencil"></i>Company Details</h6>
+                <fieldset>
+                    <div class="row myhidden" id="germanycomp" hidden>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="companyname">Company Name* :</label>
+                                <input type="text" class="form-control" id="companynamede" required>
+                            </div>
+                                <div class="form-group">
+                                  <label for="ctype">Company Type* :</label>
+                                    <select class="custom-select form-control" id="ctypeger" name="location" required>
+                                        <option value="">Select Type</option>
+                                    </select>
+                                </div>
+                            <div class="form-group">
+                                <label for="c2">Business Activity :</label>
+                                <input type="text" class="form-control" id="c2de">
+                            </div>
+                            <div class="form-group">
+                              <label for="csize">Company Size:</label>
+                                <select class="custom-select form-control" id="csizede" name="location">
+                                    <option value="">Select Company Size</option>
+                                    <option value="small">Small company (§267 Abs. 1 HGB)</option>
+                                    <option value="smallest">Smallest company (§267a HGB)</option>
+                                    <option value="midsize">Midsize company (§267 Abs. 2 HGB)</option>
+                                    <option value="large">Large company (§267 Abs. 3 HGB)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Registered By:</label>
+                                <input type="text" class="form-control" id="regbyde">
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Share Capital:</label>
+                                <input type="text" class="form-control" id="shareamountde">
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Currency:</label>
+                                <select class="custom-select form-control" id="currencyde" name="location">
+                                    <option value="">Choose Currency</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="ssd">Steatment Start Date :</label>
+                              <input type="date" class="form-control" id="ssdde">
+                          </div>
+                          <div class="form-group">
+                              <label for="sed">Steatment End Date :</label>
+                              <input type="date" class="form-control" id="sedde">
+                          </div>
+                          <div class="form-group">
+                            <label for="acmethod">Account Method:</label>
+                              <select class="custom-select form-control" id="acmethodde" name="location">
+                                  <option value="">Choose Method</option>
+                                  <option value="gesamtkostenverfahren">Gesamtkostenverfahren</option>
+                                  <option value="umsatzkostenverfahren">Umsatzkostenverfahren</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="acmethod">Account Standart :</label>
+                              <select class="custom-select form-control" id="acstandartde" name="location">
+                                  <option value="">Choose Account Standart</option>
+                                  <option value="ias">IAS</option>
+                                  <option value="handelsgesetzbuch">Handelsgesetzbuch</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="kontenrahmen">Kontenrahmen :</label>
+                              <select class="custom-select form-control" id="kontenrahmende" name="location">
+                                  <option value="">Choose Kontenrahmen</option>
+                                  <option value="skr03">SKR03</option>
+                                  <option value="skr04">SKR04</option>
+                                  <option value="custom">Custom</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Total Shares :</label>
+                              <input type="text" class="form-control" id="totlasharesde">
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Registered Date:</label>
+                              <input type="date" class="form-control" id="regdatede">
+                          </div>
+
+                        </div>
+                    </div>
+                    <div class="row myhidden" id="hongkongcomp" hidden>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="companyname">Company Name* :</label>
+                                <input type="text" class="form-control" id="companynamehk" required>
+                            </div>
+                                <div class="form-group">
+                                  <label for="ctype">Company Type* :</label>
+                                    <select class="custom-select form-control" id="ctypehk" name="location" required>
+                                        <option value="">Select Type</option>
+                                    </select>
+                                </div>
+                            <div class="form-group">
+                                <label for="c2">Business Activity :</label>
+                                <input type="text" class="form-control" id="c2hk">
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Registration Date:</label>
+                                <input type="date" class="form-control" id="regdatehk">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regby">Currency:</label>
+                                <select class="custom-select form-control" id="currencyhk" name="location">
+                                    <option value="">Choose Currency</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="ssd">BR Number :</label>
+                              <input type="text" class="form-control" id="br">
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Ordinary Share Capital:</label>
+                              <input type="text" class="form-control" id="ordsharecap">
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Preference Share Capital:</label>
+                              <input type="text" class="form-control" id="prefsharescap">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row myhidden" id="italycomp" hidden>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="companyname">Company Name* :</label>
+                                <input type="text" class="form-control" id="companynameit" required>
+                            </div>
+                                <div class="form-group">
+                                  <label for="ctype">Company Type* :</label>
+                                    <select class="custom-select form-control" id="ctypeit" name="location" required>
+                                        <option value="">Select Type</option>
+                                    </select>
+                                </div>
+                            <div class="form-group">
+                                <label for="c2">Business Activity :</label>
+                                <input type="text" class="form-control" id="c2it">
+                            </div>
+                            <div class="form-group">
+                              <label for="csize">Company Size:</label>
+                                <select class="custom-select form-control" id="csizeit" name="location">
+                                    <option value="">Select Company Size</option>
+                                    <option value="small">Small company </option>
+                                    <option value="smallest">Smallest company</option>
+                                    <option value="midsize">Midsize company</option>
+                                    <option value="large">Large company</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Registered By:</label>
+                                <input type="text" class="form-control" id="regbyit">
+                            </div>
+                            <div class="form-group">
+                                <label for="regby">Registered Date:</label>
+                                <input type="date" class="form-control" id="regdateit">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regby">Currency:</label>
+                                <select class="custom-select form-control" id="currencyit" name="location">
+                                    <option value="">Choose Currency</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="ssd">Steatment Start Date :</label>
+                              <input type="date" class="form-control" id="ssdit">
+                          </div>
+                          <div class="form-group">
+                              <label for="sed">Steatment End Date :</label>
+                              <input type="date" class="form-control" id="sedit">
+                          </div>
+                          <div class="form-group">
+                            <label for="acmethod">Account Method:</label>
+                              <select class="custom-select form-control" id="acmethodit" name="location">
+                                  <option value="">Choose Method</option>
+                                  <option value="gesamtkostenverfahren">Gesamtkostenverfahren</option>
+                                  <option value="umsatzkostenverfahren">Umsatzkostenverfahren</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="acmethod">Account Standart :</label>
+                              <select class="custom-select form-control" id="acstandartit" name="location">
+                                  <option value="">Choose Account Standart</option>
+                                  <option value="ias">IAS</option>
+                                  <option value="handelsgesetzbuch">Handelsgesetzbuch</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="kontenrahmen">Account Chart :</label>
+                              <select class="custom-select form-control" id="kontenrahmenit" name="location">
+                                  <option value="">Choose Kontenrahmen</option>
+                                  <option value="skr03">SKR03</option>
+                                  <option value="skr04">SKR04</option>
+                                  <option value="custom">Custom</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Share Capital:</label>
+                              <input type="text" class="form-control" id="shareamountit">
+                          </div>
+                          <div class="form-group">
+                              <label for="regby">Total Shares :</label>
+                              <input type="text" class="form-control" id="totlasharesit">
+                          </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Step 3 -->
+                <h6><i class="step-icon la la-tv"></i>Company Details</h6>
+                <fieldset>
+                    <div class="row myhidden" id="germanydet" hidden>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="bn">Business Number :</label>
+                              <input type="text" class="form-control" id="bnde">
+                          </div>
+                          <div class="form-group">
+                              <label for="fn">Finanzamt :</label>
+                              <input type="text" class="form-control" id="fnde">
+                          </div>
+                          <div class="form-group">
+                              <label for="tn">Tax Number :</label>
+                              <input type="text" class="form-control" id="tn">
+                          </div>
+                          <div class="form-group">
+                              <label for="vn">VAT Number :</label>
+                              <input type="text" class="form-control" id="vnde">
+                          </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                          <div class="form-group">
+                              <label for="ln">LEI Number :</label>
+                              <input type="text" class="form-control" id="lnde">
+                          </div>
+                          <div class="form-group">
+                              <label for="dn">D-U-N-S Number :</label>
+                              <input type="text" class="form-control" id="dnde">
+                          </div>
+                          <div class="form-group">
+                              <label for="secretary">Secretary </label>
+                              <input type="text" class="form-control" id="secretaryde">
+                          </div>
+                        </div>
+
+                          <div class="col-md-12">
+                          <div class="form-group">
+                              <label for="commentc">Comment </label>
+                              <textarea name="commentcde" id="commentc" rows="6" class="form-control"></textarea>
+                          </div>
+                          </div>
+                          </div>
+                    <div class="row myhidden" id="italydet" hidden>
+                              <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="fn">INAIL :</label>
+                                    <input type="text" class="form-control" id="inail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fn">INPS :</label>
+                                    <input type="text" class="form-control" id="inps">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tn">Codice Fiscale :</label>
+                                    <input type="text" class="form-control" id="codfisc">
+                                </div>
+                                <div class="form-group">
+                                    <label for="vn">Partita IVA :</label>
+                                    <input type="text" class="form-control" id="iva">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="bn">Business Number :</label>
+                                    <input type="text" class="form-control" id="bnit">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ln">LEI Number :</label>
+                                    <input type="text" class="form-control" id="lnit">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dn">D-U-N-S Number :</label>
+                                    <input type="text" class="form-control" id="dnit">
+                                </div>
+                                <div class="form-group">
+                                    <label for="secretary">Secretary </label>
+                                    <input type="text" class="form-control" id="secretary">
+                                </div>
+                              </div>
+
+                                <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="commentc">Comment </label>
+                                    <textarea name="commentcit" id="commentc" rows="6" class="form-control"></textarea>
+                                </div>
+                                </div>
+                    </div>
+                    <div class="row myhidden" id="hongkongdet" hidden>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="bn">Business Number :</label>
+                                    <input type="text" class="form-control" id="bnhk">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dn">D-U-N-S Number :</label>
+                                    <input type="text" class="form-control" id="dnhk">
+                                </div>
+
+
+                              </div>
+
+                              <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="ln">LEI Number :</label>
+                                    <input type="text" class="form-control" id="lnhk">
+                                </div>
+
+                              </div>
+
+                                <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="commentc">Comment </label>
+                                    <textarea name="commentchk" id="commentc" rows="6" class="form-control"></textarea>
+                                </div>
+                                </div>
+                    </div>
+
+                </fieldset>
+
+                {{ partial "tables/createaddress.html" . }}
+</form>

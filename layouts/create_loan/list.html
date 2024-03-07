@@ -1,0 +1,161 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Create Loan</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/loans">Loans</a>
+                  </li>
+                    <li class="breadcrumb-item active">Create Loan
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Create Loan </h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="agreementform" >
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group" id="typeselect">
+                                    <label for="invoicetype">Company Position </label>
+                                    <select class="custom-select form-control" id="compposition" >
+                                        <option value="">Select Company Position</option>
+                                        <option value="creditor">Creditor</option>
+                                        <option value="borrower">Borrower</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Interest Type </label>
+                                    <select class="custom-select form-control" id="inttype" >
+                                        <option value="">Select Interest Type</option>
+                                        <option value="fixed">Fixed</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Interest</label>
+                                    <fieldset class="form-group position-relative">
+                                    <input type="text" class="form-control form-control-lg input-lg mb-1" id="interest" >
+                                    <div class="form-control-position">
+                                    <i class="ft-percent info font-medium-4"></i>
+                                    </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bildate">Interest Period</label>
+                                    <select class="custom-select form-control" id="intperiod" >
+                                        <option value="">Select Interest Period</option>
+                                        <option value="day">Day</option>
+                                        <option value="week">Week</option>
+                                        <option value="month">Month</option>
+                                        <option value="quarter">Quarter</option>
+                                        <option value="year">Year</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group" >
+                                      <label for="invoicetype">Loan Term Type </label>
+                                      <select class="custom-select form-control" id="loantermtype" >
+                                          <option value="">Select Loan Term Type</option>
+                                          <option value="long">Long Term</option>
+                                          <option value="short">Short Term</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="invoicetype">Currency</label>
+                                      <select class="custom-select form-control" id="cur" >
+                                          <option value="">Select Currency</option>
+                                      </select>
+                                  </div>
+
+                                  <div class="form-group" >
+                                      <label for="counerparty">Counterparty Type</label>
+                                      <select class="custom-select form-control" id="loancounterpartytype" >
+                                          <option value="">Select Counterparty Type</option>
+                                          <option value="company">Company</option>
+                                          <option value="person">Person</option>
+                                          <option value="shareholder">Shareholder</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="counterpartyselect" hidden>
+                                      <label for="counerparty">Counterparty </label>
+                                      <select class="custom-select form-control" id="counterparty" >
+                                          <option value="">Select Counterparty</option>
+
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="agreementselect" hidden>
+                                      <label for="loanagreement">Agreement </label>
+                                      <select class="custom-select form-control" id="loanagreement" >
+                                          <option value="">Select Agreement</option>
+                                      </select>
+                                  </div>
+
+                                    <div class="form-group" id="cusptomerselect" >
+                                        <label for="counerparty">Payment Period </label>
+                                        <select class="custom-select form-control" id="payperiod" >
+                                            <option value="">Select Payment Period</option>
+                                            <option value="day">Day</option>
+                                            <option value="week">Week</option>
+                                            <option value="month">Month</option>
+                                            <option value="quarter">Quarter</option>
+                                            <option value="year">Year</option>
+                                            <option value="undefined">Undefined</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group" id="typeselect">
+                                    <label for="description">Description </label>
+                                    <textarea  id="description" rows="4" class="form-control"></textarea>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group" id="typeselect">
+                                      <label for="description">Comment </label>
+                                      <textarea  id="commentc" rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                              </div>
+
+                        </div >
+
+<div class="row">
+  <div class="col-md-12">
+<div class="float-right">
+<button type="submit" class="btn btn-success" id="saveloan"><i class="la la-check-square-o"></i> Save</button>
+</div>
+</div>
+</div>
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

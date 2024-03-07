@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">VATs</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Dictionary
+                            </li>
+                            <li class="breadcrumb-item">VATs
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">VATs</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                      <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>VAT</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="datatbody">
+                                          <tr>
+                                         <td class="text-right"></td>
+                                        <td class="text-right" ><input type="text" class="form-control"  id="addnewvat"></td>
+                                       <td class="text-right" ><button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addvatbtn" >Add</button></td>
+                                      </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

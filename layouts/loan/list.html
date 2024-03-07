@@ -1,0 +1,136 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Loan</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/loans">Loans</a>
+                  </li>
+                    <li class="breadcrumb-item active">Loan
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="content-header-right text-md-right col-md-6 col-12">
+
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="addloantransaction"> Add Interest</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="updateamount">Update Amount as Full Amount</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="getcurrentamount">Get Loan Amount on today</a>
+        </div>
+
+    </div>
+
+
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Loan </h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                    <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div><b>LoanID:</b> <div id="loanid"></div></div>
+                            <div><b>Company Position: </b><div id="compposition"></div></div>
+                            <div><b>Interest Type: </b><div id="inttype"></div></div>
+                            <div><b>Interest: </b><div id="interest"></div></div>
+                            <div><b>Interest Period: </b><div id="intperiod"></div></div>
+                            <div><b>Counterparty Type: </b><div id="counterpartytype"></div></div>
+                            <div><b>Counterparty: </b><div id="counterparty"></div></div>
+                            <div><b>Agreement: </b><div id="agreement"></div></div>
+                            <div><b>Start Date: </b><div id="startdate"></div></div>
+                            </div>
+                            <div class="col-md-6">
+                              <div><b>Loan Term Type:</b> <div id="loantermtype"></div></div>
+                              <div><b>Currency:</b> <div id="currency"></div></div>
+                              <div><b>Amount:</b> <div id="amount"></div></div>
+                              <div><b>Full Amount:</b> <div id="fullamount"></div></div>
+                              <div><b>Payment Period :</b> <div id="payperiod"></div></div>
+                              <div><b>Last Interest Date :</b> <div id="lastperiod"></div></div>
+                              <div><b>Next Interest Date :</b> <div id="nextperiod"></div></div>
+                              <div><b>Description:</b> <div id="description"></div></div>
+                              <div><b>Comment:</b> <div id="comment"></div></div>
+                              <div><b>Created By:</b> <div id="createdby"></div></div>
+                              <div><b>Created:</b> <div id="created"></div></div>
+                              <div><b>Edited:</b> <div id="edited"></div></div>
+                              <div><b>Edited By:</b> <div id="editedby"></div></div>
+                              </div>
+
+
+
+                      </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+            </section>
+        <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Loan Transactions</h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                    <div class="card-body">
+                      <div class="tab-content">
+                        <div class="table-responsive">
+                          <table class="table mb-0 table-striped restable"
+                          data-height="450"
+                          data-virtual-scroll="true"
+                          data-resizable-columns-id="table"
+                          data-resizable="false"
+                          data-show-columns="true"
+                          data-search="true"
+                          data-show-toggle="true">
+                              <thead>
+                                  <tr>
+                                      <th data-sortable="true"  data-resizable-column-id="date">Date</th>
+                                      <th data-sortable="true"  data-resizable-column-id="type">Type</th>
+                                      <th data-sortable="true"  data-resizable-column-id="amount">Amount</th>
+                                      <th data-sortable="true" data-resizable-column-id="comment">Description</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="loantransactionstbody">
+
+                              </tbody>
+                          </table>
+                      </div>
+                        </div>
+
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

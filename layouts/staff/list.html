@@ -1,0 +1,163 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0"> Staff</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">HR
+                            </li>
+                            <li class="breadcrumb-item">Staff
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="#" id="createstaffbtn"><i class="icon-cog3"></i> Create Staff Card</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/busta_paga" ><i class="icon-cog3"></i> Custom Busta Paga</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                <div class="row" id="createstaffcard" hidden>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Create Staff Card</h4>
+                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                    <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Counterparty</label>
+                                    <select class="custom-select form-control" id="cparty" >
+                                        <option value="">Select Counterparty</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Status</label>
+                                    <select class="custom-select form-control" id="status" >
+                                        <option value="">Select Status</option>
+                                        <option value="employee">Employee</option>
+                                        <option value="candidate">Candidate</option>
+                                        <option value="resignated">Resignated</option>
+                                        <option value="denied">Denied</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Position</label>
+                                    <input type="text" class="form-control"  id="position">
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Department</label>
+                                    <input type="text" class="form-control"  id="department">
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">Country</label>
+                                    <select class="custom-select form-control" id="adrcountry" >
+                                        <option value="">Select Country</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                    <label for="adrcountrytxt">City</label>
+                                    <select class="custom-select form-control" id="ct" >
+                                        <option value="">Select City</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" >
+                                      <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="addstaffbtn" >Save</button>
+                                      <button class="btn btn-sm btn-secondary ml-50 mb-2 mr-2" id="closestaffbtn" >Close</button>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Base Salary</label>
+                                      <input type="text" class="form-control"  id="basesalary">
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Currency</label>
+                                      <select class="custom-select form-control" id="currency" >
+                                          <option value="">Select Currency</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Start Work</label>
+                                      <input type="date" class="form-control"  id="startwork">
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">End Work</label>
+                                      <input type="date" class="form-control"  id="endwork">
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="adrcountrytxt">Comment</label>
+                                      <input type="text" class="form-control"  id="comment">
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                        </div>
+                        </div>
+                    <div class="row" id="stafflist">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Staff</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                      <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th></th>
+                                                <th>Surname</th>
+                                                <th>Name</th>
+                                                <th>Birthdate</th>
+                                                <th>Sex</th>
+                                                <th>Status</th>
+                                                <th>Position</th>
+                                                <th>Department</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="stafftbody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

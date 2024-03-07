@@ -1,0 +1,551 @@
+################################# Default configuration ###################
+# provide your domain here
+baseURL = "https://demo.erpamy.com/api/v2"
+relativeURLs = true
+# theme
+# theme = "x"
+
+# site title
+title = "Amy ERP/CRM"
+# disable language
+disableLanguages = []
+# Default language
+DefaultContentLanguage = "en"
+
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+################## english navigation Language menu #################
+[[Languages.en.menu.language]]
+name = "English"
+url = "/en"
+post = "flag-icon flag-icon-us"
+weight = 1
+
+#[[Languages.en.menu.language]]
+#name = "Русский"
+#url = "/ru"
+#post = "flag-icon flag-icon-ru"
+#weight = 2
+
+#[[Languages.en.menu.language]]
+#name = "Deutsche"
+#url = "/de"
+#post = "flag-icon flag-icon-de"
+#weight = 3
+
+################################ English Language ######################
+[Languages.en]
+languageName = "English"
+languageCode = "en-us"
+weight = 1
+copyright = "© 2020 - 2024 Amy ERP/CRM CE"
+
+
+
+################## english navigation Profile menu #################
+#[[Languages.en.menu.profile]]
+#name = "Edit Profile"
+#url = "/profile"
+#post = "ft-user"
+#weight = 1
+
+[[Languages.en.menu.profile]]
+name = "Settings"
+url = "/settings"
+post = "ft-settings"
+weight = 1
+
+#[[Languages.en.menu.profile]]
+#name = "Todo"
+#url = "/profile"
+#post = "ft-clipboard"
+#weight = 2
+
+#[[Languages.en.menu.profile]]
+#name = "Task"
+#url = "/profile"
+#post = "ft-check-square"
+#weight = 3
+
+
+
+################## english navigation. Main menu #################
+[[Languages.en.menu.main]]
+name = "Dashboard"
+url = "/"
+identifier = "dasboardmenu"
+post = "mbri-desktop"
+weight = 1
+
+
+[[Languages.en.menu.main]]
+name = "Create ..."
+url = "#"
+weight = 2
+identifier = "createmenu"
+post = "mbri-extension"
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "createmenu"
+name = "Invoice, Proforma, Credit Note"
+url = "/create_invoice"
+identifier = "createinvoice"
+post = "la la-check-square"
+weight = 1
+
+#[[Languages.en.menu.main]]
+#parent = "createmenu"
+#name = "Subscribtion"
+#url = "/journals/subscribtions/new"
+#identifier = "newsubscribtion"
+#post = "la la-check-square"
+#weight = 2
+
+#[[Languages.en.menu.main]]
+#parent = "createmenu"
+#name = "Letter"
+#url = "/journals/correspondence/new"
+#identifier = "newletter"
+#post = "la la-check-square"
+#weight = 3
+
+#[[Languages.en.menu.main]]
+#parent = "createmenu"
+#name = "Agreement"
+#url = "/journals/agreements/new"
+#identifier = "newagreement"
+#post = "la la-check-square"
+#weight = 4
+
+#[[Languages.en.menu.main]]
+#parent = "createmenu"
+#name = "Resolution"
+#url = "/journals/resolutions/new"
+#identifier = "newresolution"
+#post = "la la-check-square"
+#weight = 5
+
+[[Languages.en.menu.main]]
+name = "My Accounts"
+url = "#"
+identifier = "mycompanymenu"
+post = "mbri-star"
+weight = 3
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "mycompanymenu"
+name = "Account Profile"
+url = "/account_profile"
+identifier = "mycompprofile"
+post = "la la-check-square"
+weight = 1
+
+
+[[Languages.en.menu.main]]
+parent = "mycompanymenu"
+name = "Show Accounts"
+url = "/my_accounts"
+identifier = "showmycomp"
+post = "la la-check-square"
+weight = 2
+
+[[Languages.en.menu.main]]
+parent = "mycompanymenu"
+name = "Create Account"
+url = "/create_account"
+identifier = "addmycomp"
+post = "la la-check-square"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "Journals"
+url = "#"
+identifier = "journalmenu"
+post = "la la-book"
+weight = 4
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Invoices, Credit Notes"
+url = "/outgoing_invoices"
+identifier = "invoices"
+post = "la la-check-square"
+weight = 1
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "invoices"
+name = "Outgoing Invoice"
+url = "/outgoing_invoices"
+identifier = ""
+post = ""
+weight = 1
+
+[[Languages.en.menu.main]]
+parent = "invoices"
+name = "Incoming Invoices"
+url = "/incoming_invoices"
+identifier = ""
+post = ""
+weight = 2
+
+#[[Languages.en.menu.main]]
+#name = "Inventory"
+#url = "#"
+#identifier = "wmsmenu"
+#post = "la la-industry"
+#weight = 5
+#hasChildren = true
+
+#[[Languages.en.menu.main]]
+#parent = "wmsmenu"
+#name = "Delivery Orders"
+#url = "/delivery_orders"
+#post = "la la-check-square"
+#weight = 1
+
+#[[Languages.en.menu.main]]
+#parent = "wmsmenu"
+#name = "Receipts"
+#url = "/wms_receipts"
+#post = "la la-check-square"
+#weight = 2
+
+#[[Languages.en.menu.main]]
+#parent = "wmsmenu"
+#name = "Warehouses"
+#url = "/warehouses"
+#post = "la la-check-square"
+#weight = 3
+
+#[[Languages.en.menu.main]]
+#parent = "wmsmenu"
+#name = "Products"
+#url = "/wms_products"
+#post = "la la-check-square"
+#weight = 4
+
+
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Subscribtions"
+#url = "/journals/subscribtions"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 2
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Incomes"
+url = "/incomes"
+identifier = ""
+post = "la la-check-square"
+weight = 3
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Payments"
+url = "/payments"
+identifier = ""
+post = "la la-check-square"
+weight = 4
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Correspondence"
+url = "#"
+identifier = "correspondencemenu"
+post = "la la-check-square"
+weight = 5
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "correspondencemenu"
+name = "Incoming Mail"
+url = "/incoming_mails"
+identifier = "la-envelope"
+post = ""
+weight = 1
+
+[[Languages.en.menu.main]]
+parent = "correspondencemenu"
+name = "Outgoing Mail"
+url = "/outgoing_mails"
+identifier = ""
+post = "la-envelope-open"
+weight = 2
+
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Kassenbuch"
+#url = "/journals/kassenbuch"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 6
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Transport book"
+#url = "/journals/transport_book"
+#identifier = ""
+#post = "la la-automobile"
+#weight = 7
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Resolutions / Orders"
+#url = "/journals/resolutions"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 8
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Agreements"
+url = "/agreements"
+identifier = ""
+post = "la la-check-square"
+weight = 10
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Steatments"
+#url = "/steatments"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 11
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Loans"
+#url = "/loans"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 12
+
+[[Languages.en.menu.main]]
+parent = "journalmenu"
+name = "Transfers"
+url = "/transfers"
+identifier = ""
+post = "la la-check-square"
+weight = 13
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Creditors"
+#url = "/journals/creditors"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 11
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Debitors"
+#url = "/journals/debitors"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 12
+
+#[[Languages.en.menu.main]]
+#parent = "journalmenu"
+#name = "Trading"
+#url = "/journals/trading"
+#identifier = ""
+#post = "la la-check-square"
+#weight = 13
+
+[[Languages.en.menu.main]]
+name = "Catalog"
+url = "/"
+identifier = "catalogmenu"
+post = "mbri-database"
+weight = 5
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "catalogmenu"
+name = "Counterparties"
+url = "#"
+identifier = "conterpartiesmenu"
+post = "la la-check-square"
+weight = 1
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "conterpartiesmenu"
+name = "Company"
+url = "/companies"
+identifier = ""
+post = ""
+weight = 1
+
+[[Languages.en.menu.main]]
+parent = "conterpartiesmenu"
+name = "Person"
+url = "/persons"
+identifier = ""
+post = ""
+weight = 2
+
+[[Languages.en.menu.main]]
+parent = "catalogmenu"
+name = "Customers"
+url = "/customers"
+identifier = ""
+post = "la la-check-square"
+weight = 2
+
+[[Languages.en.menu.main]]
+parent = "catalogmenu"
+name = "Fixed Assets"
+url = "/fixed_assets"
+identifier = ""
+post = "la la-automobile"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "Dictionary"
+url = "/"
+identifier = "dictionarymenu"
+post = "la la-university"
+weight = 6
+hasChildren = true
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "Languages"
+url = "/languages"
+identifier = ""
+post = ""
+weight = 1
+
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "Currencies"
+url = "/currencies"
+identifier = ""
+post = ""
+weight = 2
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "CryptoCurrencies"
+url = "/cryptocurrencies"
+identifier = ""
+post = ""
+weight = 3
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "Countries & Cities"
+url = "/countries_and_cities"
+identifier = ""
+post = ""
+weight = 4
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "Accountant Charts"
+url = "/account_charts"
+identifier = ""
+post = ""
+weight = 5
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "Company Types"
+url = "/company_types"
+identifier = ""
+post = ""
+weight = 6
+
+[[Languages.en.menu.main]]
+parent = "dictionarymenu"
+name = "VATs"
+url = "/vats"
+identifier = ""
+post = ""
+weight = 7
+
+#[[Languages.en.menu.main]]
+#name = "Accounting"
+#url = "#"
+#identifier = "accountingmenu"
+#post = "la la-leanpub"
+#weight = 7
+#hasChildren = true
+
+#[[Languages.en.menu.main]]
+#parent = "accountingmenu"
+#name = "Connections"
+#url = "#"
+#identifier = "accconnections"
+#post = ""
+#weight = 1
+#hasChildren = true
+
+#[[Languages.en.menu.main]]
+#parent = "accconnections"
+#name = "VAT Connections"
+#url = "/vat_connections"
+#identifier = ""
+#post = ""
+#weight = 1
+
+#[[Languages.en.menu.main]]
+#parent = "accconnections"
+#name = "Object Connections"
+#url = "/object_connections"
+#identifier = ""
+#post = ""
+#weight = 2
+
+#[[Languages.en.menu.main]]
+#parent = "accountingmenu"
+#name = "General Ledger"
+#url = "/general_ledger"
+#identifier = ""
+#post = ""
+#weight = 3
+
+#[[Languages.en.menu.main]]
+#parent = "accountingmenu"
+#name = "Transactions"
+#url = "/transactions"
+#identifier = ""
+#post = ""
+#weight = 4
+
+#[[Languages.en.menu.main]]
+#parent = "accountingmenu"
+#name = "Saldo"
+#url = "/saldo"
+#identifier = ""
+#post = ""
+#weight = 5
+
+#[[Languages.en.menu.main]]
+#name = "HR"
+#url = "#"
+#identifier = "hrmenu"
+#post = "la la-male"
+#weight = 8
+#hasChildren = true
+
+#[[Languages.en.menu.main]]
+#parent = "hrmenu"
+#name = "Staff"
+#url = "/staff"
+#identifier = ""
+#post = ""
+#weight = 1

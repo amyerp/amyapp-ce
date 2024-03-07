@@ -1,0 +1,94 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Income</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">Journals
+                  </li>
+                  <li class="breadcrumb-item"><a href="/incomes">Incomes</a>
+                  </li>
+                    <li class="breadcrumb-item active">Income
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-right text-md-right col-md-6 col-12">
+      <div class="btn-group">
+          <a class="btn btn-round btn-info mb-1" type="button" href="" id="genpdfreceipt"><i class="la la-file-pdf-o"></i> PDF Receipt</a>
+      </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="editinvoice"> Edit Income</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="completeincome"> Complite</a>
+        </div>
+
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title" >Income</h4><div>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="invoicebody" >
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div><b>IncomeID:</b> <div id="incomeid"></div></div>
+                              <div><b>Amount: </b><div id="totalamount"></div></div>
+                                <div><b>Counterparty: </b><div id="counterparty"></div></div>
+                                <div><b>Payment Date: </b><div id="paydate"></div></div>
+                              </div>
+                              <div class="col-md-6">
+                                <div><b>Account Type:</b> <div id="acctype"></div></div>
+                                <div><b>Created:</b> <div id="created"></div></div>
+                                <div><b>Edited:</b> <div id="edited"></div></div>
+                                <div><b>Comment:</b> <div id="tcomment"></div></div>
+                                </div>
+
+                          </div>
+
+                        </div>
+                        <div id="invoicecontent" class="table-responsive" index="1">
+                        <div class="mt-2"><h4>Income Details</h4></div>
+                        <div class="invoiceformrepeater">
+
+                          <table class="table mb-0">
+         <thead>
+           <tr>
+             <th >#</th>
+             <th >Amount</th>
+             <th >Payment Basis</th>
+             <th >Comment</th>
+           </tr>
+         </thead>
+<tbody id="incometbody">
+
+
+  </tbody>
+</table>
+</div>
+  </div>
+</div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

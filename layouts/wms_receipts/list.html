@@ -1,0 +1,91 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Inventory Receipts</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Inventory
+                            </li>
+                            <li class="breadcrumb-item">Receipts
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/create_invoice"><i class="icon-cog3"></i> Create</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_outgoing_invoice"><i class="icon-cog3"></i> Import</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_outgoing_invoice"><i class="icon-cog3"></i> Export</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_outgoing_invoice"><i class="icon-cog3"></i> Filter</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Inventory Receipts</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="tab-content">
+                                  <smal>Find <span id="findrecords"></span> records: 151</smal>
+                                  </div>
+                                <div class="tab-content">
+                                  <div class="table-responsive"  >
+                                    <div style="width:1500px;">
+                                      <table class="table mb-0 table-striped restable"
+                                        id="outinvoicestable"
+                                        data-height="450"
+                                        data-virtual-scroll="true"
+                                        data-resizable-columns-id="table"
+                                        data-resizable="true"
+                                        data-show-columns="true"
+                                        data-search="true"
+                                        data-show-toggle="true"
+                                        data-row-attributes="outinvoicesAttributes">
+                                        <thead >
+                                          <tr >
+                                              <th  data-field="#" data-sortable="true" data-resizable-column-id="#">#</th>
+                                              <th  data-field="Type" data-sortable="true" data-resizable-column-id="type">Reference</th>
+                                              <th data-field="Counterparty" data-sortable="true" data-resizable-column-id="cp">Warehouse</th>
+                                              <th  data-field="Status" data-formatter="statusFormatter" data-sortable="true" data-resizable-column-id="status">Scheduled Date</th>
+                                              <th  data-field="BillingDate" data-sortable="true" data-resizable-column-id="created">Source Document</th>
+                                              <th  data-field="Amount" data-formatter="currencyFormatter" data-sortable="true" data-resizable-column-id="amount">Company</th>
+                                              <th data-field="VAT" data-formatter="currencyFormatter" data-sortable="true" data-resizable-column-id="vat">Status</th>
+                                          </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

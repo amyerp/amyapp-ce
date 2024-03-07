@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Incoming Invoices</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Journals
+                            </li>
+                            <li class="breadcrumb-item">Incoming Invoices, Proforma, Credit Notes
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/add_incoming_invoice"><i class="icon-cog3"></i> Add ...</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Invoices, Proforma, Credit Notes</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="tab-content">
+                                  <smal>Find <span id="findrecords"></span> records</smal>
+                                  </div>
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                    <table class="table mb-0 table-striped restable"
+                                    id="invoicestable"
+                                    data-height="450"
+                                    data-virtual-scroll="true"
+                                    data-resizable-columns-id="table"
+                                    data-resizable="true"
+                                    data-show-columns="true"
+                                    data-search="true"
+                                    data-show-toggle="true"
+                                    data-row-attributes="ininvoicesAttributes">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="Num" data-sortable="true" data-resizable-column-id="#">#</th>
+                                                <th data-field="Type" data-sortable="true" data-resizable-column-id="type">Type</th>
+                                                <th data-field="Counterparty" data-sortable="true" data-resizable-column-id="cp">Counterparty</th>
+                                                <th data-field="status" data-formatter="statusFormatter" data-sortable="true" data-resizable-column-id="status">Status</th>
+                                                <th data-field="ReceivedDate" data-sortable="true" data-resizable-column-id="created">Created</th>
+                                                <th data-field="TotalAmount" data-formatter="currencyFormatter" data-sortable="true" data-resizable-column-id="amount">Amount</th>
+                                                <th data-field="VAT" data-formatter="currencyFormatter" data-sortable="true" data-resizable-column-id="vat">VAT</th>
+                                                <th data-field="Paid" data-formatter="paidFormatter" data-sortable="true" data-resizable-column-id="paid">Is Paid</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

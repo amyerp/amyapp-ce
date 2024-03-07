@@ -1,0 +1,112 @@
+
+<section class="section text-center" id="signinsection">
+  <div class="container">
+    <div class="row ">
+      <div class="col">
+  <div class="mb-4 text-center" ><h1>{{ i18n "erp_title" | safeHTML }}</h1></div>
+  <div id="signinserresp"></div>
+        <form class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-2">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <div class="btn btn-lg btn-primary btn-block"  id="siginbtn">Sign in</div>
+
+      <div class=" mt-2"><a href='{{ "forgot/" | absLangURL }}'>Forgot password?</a></div>
+    </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section text-center" id="confemailsection" hidden>
+  <div class="container">
+    <div class="row ">
+
+      <div class="col">
+  <div class="mb-4 text-center" ><h1>{{ i18n "erp_title" | safeHTML }}</h1></div>
+  <div id="confemailresp"></div>
+        <form class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal">Please confirm your email</h1>
+      <label for="inputEmail" class="sr-only">If you olready confiremed your email, please relogin to start use ERP</label>
+      <div class=" mt-2">Don't received email? <a href='#' id="resconflink"> Resend confiramtion link</a></div>
+      <a class="btn btn-lg btn-primary btn-block" href='#'  id="menu-logoutb">Logout</a>
+    </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section text-center" id="tfa" hidden>
+  <div class="container">
+    <div class="row flex-row">
+      <div class="col ">
+
+        <div class="mb-4 text-center" ><h1>{{ i18n "erp_title" | safeHTML }}</h1></div>
+<div class="card p-2 text-center">
+  <div id="otpresp"></div>
+          <h6>Please enter the one time password <br> to verify your account</h6>
+          <div> <span>A code has been sent to</span> <small id="toem"></small> </div>
+          <div id="otp" class="inputstfa d-flex flex-row justify-content-center mt-1" > <input class="mr-1 text-center form-control rounded" type="text" id="first" maxlength="1" /> <input class="mr-1 text-center form-control rounded" type="text" id="second" maxlength="1" /> <input class="mr-1 text-center form-control rounded" type="text" id="third" maxlength="1" /> <input class="mr-1 text-center form-control rounded" type="text" id="fourth" maxlength="1" /> <input class="mr-1 text-center form-control rounded" type="text" id="fifth" maxlength="1" /> <input class="text-center form-control rounded" type="text" id="sixth" maxlength="1" /> </div>
+          <div class="mt-4"> <button class="btn btn-danger px-4 validate" id="valtfa">Validate</button>  <a class="btn btn-primary px-4 validate" href="/">Logout</a> </div>
+
+      <div class="">
+          <div class="content d-flex justify-content-center align-items-center mt-2"> <span>Didn't get the code - </span> <a href="#" class="text-decoration-none ms-3" id="resendotp"> Resend</a> </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</section>
+<section id="dasboard">
+  <div class="container">
+    <div class="row ">
+      <div class="col">
+        <div id="srm"></div>
+        <div class="card invisible" id="mycompanycard">
+                            <div class="card-header">
+                                <h4 class="card-title" id="mycompanycardtitle"></h4>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a href="/account_profile">Show all</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content collapse show">
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                      <table class="table mb-0 table-striped restable"
+                                      id="gencomptable"
+                                      data-toggle="table"
+                                      data-resizable-columns-id="table"
+                                      data-resizable="true"
+                                      data-card-view="true">
+                                          <thead>
+                                              <tr>
+                                                  <th data-field="BusinesNumber" >Business Number</th>
+                                                  <th data-field="TaxNumber" >Tax Number</th>
+                                                  <th data-field="VATnumber" >VAT Number</th>
+                                                  <th data-field="LEInumber" >LEI Number</th>
+                                                  <th data-field="DUNSnumber" >DUNS Number</th>
+                                                  <th data-field="Activity" >Activity</th>
+                                                  <th data-field="address" data-formatter="addressFormatter">Address</th>
+                                                  </tr>
+                                          </thead>
+                                          <tbody >
+                                          </tbody>
+                                      </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+      </div>
+    </div>
+  </div>
+</section>

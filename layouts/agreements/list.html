@@ -1,0 +1,83 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Agreements</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Journals
+                            </li>
+                            <li class="breadcrumb-item">Agreements
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group" hidden>
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/new_agreement"><i class="icon-cog3"></i> Create ...</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/import_agreement"><i class="icon-cog3"></i> Import ...</a>
+                </div>
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Agreements</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                    <table class="table mb-0 table-striped restable"
+                                    data-height="450"
+                                    data-virtual-scroll="true"
+                                    data-resizable-columns-id="table"
+                                    data-resizable="false"
+                                    data-show-columns="true"
+                                    data-search="true"
+                                    data-show-toggle="true">
+                                        <thead>
+                                            <tr>
+                                                <th data-sortable="true"  data-resizable-column-id="#">#</th>
+                                                <th data-sortable="true"  data-resizable-column-id="type">Type</th>
+                                                <th data-sortable="true"  data-resizable-column-id="number">Number</th>
+                                                <th data-sortable="true"  data-resizable-column-id="name">Name</th>
+                                                <th data-sortable="true"  data-resizable-column-id="sdate">Sign Date</th>
+                                                <th data-sortable="true"  data-resizable-column-id="cp">Counterparty</th>
+                                                <th data-sortable="true"  data-resizable-column-id="customer">Customer</th>
+                                                <th data-sortable="true"  data-resizable-column-id="status">Status</th>
+                                                <th data-sortable="true"  data-resizable-column-id="active">Is Active</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="agreementstbody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}

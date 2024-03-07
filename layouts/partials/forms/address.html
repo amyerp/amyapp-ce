@@ -1,0 +1,78 @@
+<div class="addressrepeater" index="1">
+<div data-repeater-list="car">
+    <div data-repeater-item>
+<form action="#" class=" ">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group" >
+                            <label for="adrcountrytxt">Description </label>
+                            <input type="text" class="form-control" name="descript" >
+                        </div>
+                        <div class="form-group" id="countryselect">
+                            <label for="adrcountry">Country </label>
+                            <select class="custom-select form-control" name="adrcountry" name="location">
+                                <option value="">Select Country</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Hong Kong">Hong Kong</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="countrytext" hidden>
+                            <label for="adrcountrytxt">Country </label>
+                            <input type="text" class="form-control" id="adrcountrytxt" >
+                        </div>
+                        <div class="form-group">
+                            <label for="ct">City </label>
+                            <input type="text" class="form-control" name="ct">
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area </label>
+                            <input type="text" class="form-control" name="area">
+                        </div>
+                        <div class="form-group">
+                            <label for="st">Street </label>
+                            <input type="text" class="form-control" name="st">
+                        </div>
+                        <div class="form-group">
+                            <label for="hs">House</label>
+                            <input type="text" class="form-control" name="hs">
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="blg">Building</label>
+                            <input type="text" class="form-control" name="blg">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="of">Office</label>
+                            <input type="text" class="form-control" name="of">
+                        </div>
+                        <div class="form-group">
+                            <label for="fl">Floor </label>
+                            <input type="text" class="form-control" name="fl">
+                        </div>
+                        <div class="form-group">
+                            <label for="pcode">Post Code </label>
+                            <input type="text" class="form-control" name="pcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="commentadr">Comment :</label>
+                            <textarea name="commentc" id="commentadr" rows="6" class="form-control"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-danger" data-repeater-delete id="ccurdel"> <i class="ft-x"></i>Delete</button>
+
+                      </div>
+                  </div>
+  </form>
+</div>
+</div>
+<button type="submit" class="btn btn-primary" id="addressavebtn"><i class="la la-check-square-o"></i> Save</button>
+<button type="submit" class="btn btn-primary" id="addressaveperson" hidden><i class="la la-check-square-o"></i> Save</button>
+
+  <button data-repeater-create class="btn btn-primary"><i class="ft-plus"></i> Add</button>
+  <button type="submit" class="btn btn-warning" id="addresscancel"><i class="la la-check-square-o"></i> Cancel</button>
+  </div>

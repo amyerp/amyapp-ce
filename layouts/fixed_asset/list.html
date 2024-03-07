@@ -1,0 +1,134 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Fixed Asset</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/fixed_assets">Fixed Assets</a>
+                  </li>
+                    <li class="breadcrumb-item active">Fixed Asset
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="content-header-right text-md-right col-md-6 col-12">
+
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="addfatransaction">Calc Amortisation</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="complitefa">Complite</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="leavefa">Set Leave</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="editfa">Edit</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="uploadfa">Upload File</a>
+        </div>
+    </div>
+
+
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Fixed Asset </h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                    <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div><b>FAID:</b> <div id="faid"></div></div>
+                            <div><b>Fixed Asset Type: </b><div id="fatype"></div></div>
+                            <div><b>Branch: </b><div id="branch"></div></div>
+                            <div><b>Incoming Date: </b><div id="indate"></div></div>
+                            <div><b>Leave Date: </b><div id="leavedate"></div></div>
+                            <div><b>Purchased Price: </b><div id="pprice"></div></div>
+                            <div><b>Current Cost: </b><div id="cprice"></div></div>
+                            <div><b>Amortisation Period: </b><div id="amperiod"></div></div>
+                            <div><b>Comment: </b><div id="comment"></div></div>
+                            <div><b>Description: </b><div id="desc"></div></div>
+                            </div>
+                            <div class="col-md-6">
+                              <div><b>VIN:</b> <div id="vin"></div></div>
+                              <div><b>Manufacturer:</b> <div id="manu"></div></div>
+                              <div><b>Model:</b> <div id="model"></div></div>
+                              <div><b>Production Year:</b> <div id="pyear"></div></div>
+                              <div><b>Plate Number :</b> <div id="pnumber"></div></div>
+                              <div><b>Fuel Type:</b> <div id="fueltype"></div></div>
+                              <div><b>Service Date:</b> <div id="serdate"></div></div>
+                              <div><b>Created By:</b> <div id="createdby"></div></div>
+                              <div><b>Created:</b> <div id="created"></div></div>
+                              <div><b>Edited:</b> <div id="edited"></div></div>
+                              <div><b>Edited By:</b> <div id="editedby"></div></div>
+                              <div><b>Complited By:</b> <div id="complitedby"></div></div>
+                            </div>
+                      </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+            </section>
+        <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Fixed Asset Transactions</h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                    <div class="card-body">
+                      <div class="tab-content">
+                        <div class="table-responsive">
+                          <table class="table mb-0 table-striped restable"
+                          data-height="450"
+                          data-virtual-scroll="true"
+                          data-resizable-columns-id="table"
+                          data-resizable="false"
+                          data-show-columns="true"
+                          data-search="true"
+                          data-show-toggle="true">
+                              <thead>
+                                  <tr>
+                                      <th data-sortable="true"  data-resizable-column-id="date">Date</th>
+                                      <th data-sortable="true"  data-resizable-column-id="type">Type</th>
+                                      <th data-sortable="true"  data-resizable-column-id="amount">Amount</th>
+                                  </tr>
+                              </thead>
+                          </table>
+                      </div>
+                        </div>
+
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

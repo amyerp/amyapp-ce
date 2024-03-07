@@ -1,0 +1,134 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Outgoing Invoice</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/outgoing_invoices">Outgoing Invoices, Proforma, Credit Notes</a>
+                  </li>
+                    <li class="breadcrumb-item active">Invoice
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-right text-md-right col-md-6 col-12">
+      <div class="btn-group">
+          <a class="btn btn-round btn-info mb-1" type="button" href="" id="genpdfinvoice"><i class="la la-file-pdf-o"></i> PDF</a>
+      </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="editinvoice"> Edit Invoice</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="" id="uploadfile"><i class="la la-file-pdf-o"></i> Upload file</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="completeinvoice"> Complite</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="markassent" hidden> Mark as Sent</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="duplicateinvoice" > Duplicate</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="sendinvoicetoemail" > Email Invoice to Customer</a>
+        </div>
+
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title" id="invoicetype">Outgoing Invoice / or Proforma invoice</h4><div id="invoicebade"></div><div>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="invoicebody" >
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div><b>InvoiceID:</b> <div id="invoiceid"></div></div>
+                              <div><b>Invoice Number: </b><div id="invoicenumber"></div></div>
+                                <div><b>Counterparty: </b><div id="counterparty"></div></div>
+                                <div><b>Counterparty Address: </b><div id="counterpartyaddress"></div></div>
+                              </div>
+                              <div class="col-md-6">
+                                <div><b>Billing Date:</b> <div id="billdate"></div></div>
+                                <div><b>Description:</b> <div id="description"></div></div>
+                                <div><b>Created:</b> <div id="created"></div></div>
+                                <div><b>Edited:</b> <div id="edited"></div></div>
+                                <div><b>Invoice Email:</b> <div id="invemail"></div></div>
+                                </div>
+
+                          </div>
+
+                        </div>
+                        <div id="invoicecontent" class="table-responsive" index="1">
+                        <div class="mt-2"><h4>Invoice Content</h4></div>
+                        <div class="invoiceformrepeater">
+
+                          <table class="table mb-0">
+         <thead>
+           <tr>
+             <th  >#</th>
+             <th  >Subscribtion</th>
+             <th >Price</th>
+              <th >Amount</th>
+           </tr>
+         </thead>
+<tbody id="invoicetbody">
+
+
+  </tbody>
+  <tr>
+  <td colspan="2"></td>
+  <td>Net Amount: <span id="netam"></span> <br><div id="vatinfo"></div></td>
+  <td></td>
+  </tr>
+  <tr id="preptr" hidden>
+  <td colspan="2"></td>
+  <td>Prepayment: <span id="prepayment"></span></td>
+  <td></td>
+  </tr>
+  <tr>
+  <td colspan="2"></td>
+  <td>Total Amount: <span id="totam"></span></td>
+  <td></td>
+  </tr>
+
+</table>
+
+  </div>
+  </div>
+
+
+
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="fileup" hidden>
+      <div class="invoicefileuploader">
+        <p class="card-text"></p>
+        <button type="submit" class="btn btn-success" id="upfilescancel"><i class="la la-check-square-o"></i> Close</button>
+        <form action="#" class="dropzone dropzone-area" id="importinvoice">
+            <div class="dz-message">Drop Files Here To Upload</div>
+        </form>
+        </div>
+      </section>
+{{ end }}

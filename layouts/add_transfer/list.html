@@ -1,0 +1,125 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Add Transfer</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/transfers">Transfers</a>
+                  </li>
+                    <li class="breadcrumb-item active">Add Transfer
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Add Transfer</h4>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="invoiceform" >
+                          <div class="row">
+                              <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="bildate">Transfer Date </label>
+                                    <input type="date" class="form-control" id="date" >
+                                </div>
+                                <div class="form-group" >
+                                    <label for="counerparty">Transfer From</label>
+                                    <select class="custom-select form-control" id="acctype">
+                                        <option value="">Select Account Type</option>
+                                        <option value="bank">Bank</option>
+                                        <option value="cassa">Cassa</option>
+                                        <option value="crypto">Cryptocurrency</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="acctypeselect" hidden>
+                                    <label for="acctypes" id="acctypelabel">Account </label>
+                                    <select class="custom-select form-control" id="acctypes" >
+                                        <option value="">Select Account</option>
+
+                                    </select>
+                                </div>
+                                 </div>
+                                <div class="col-md-6">
+                                  <div class="form-group" id="typeselect">
+                                      <label for="cur">Currency </label>
+                                      <select class="custom-select form-control" id="cur" name="location">
+                                          <option value="">Select Curency</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" >
+                                      <label for="counerparty">Transfer To</label>
+                                      <select class="custom-select form-control" id="acctypeb">
+                                          <option value="">Select Account Type</option>
+                                          <option value="bank">Bank</option>
+                                          <option value="cassa">Cassa</option>
+                                          <option value="crypto">Cryptocurrency</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group" id="acctypebselect" hidden>
+                                      <label for="acctypes" id="acctypelabel">Account </label>
+                                      <select class="custom-select form-control" id="acctypesb" >
+                                          <option value="">Select Account</option>
+
+                                      </select>
+                                  </div>
+                                  </div>
+
+
+                                  </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="text" class="form-control" id="amount" >
+                            </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group" id="typeselect">
+                                    <label for="description">Description </label>
+                                    <textarea name="commentc" id="description" rows="4" class="form-control"></textarea>
+                                  </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="form-group" id="typeselect">
+                                      <label for="description">Comment </label>
+                                      <textarea name="commentc" id="comment" rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                            <div class="float-right">
+                            <button type="submit" class="btn btn-success" id="savetransfer"><i class="la la-check-square-o"></i> Save</button>
+                            </div>
+                            </div>
+                            </div>
+
+                        </div >
+
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -1,0 +1,125 @@
+{{ define "main" }}
+<div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2">
+        <h3 class="content-header-title mb-0">Payment Details</h3>
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/payments">Payments</a>
+                  </li>
+                    <li class="breadcrumb-item active">Payment Details
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-right text-md-right col-md-6 col-12">
+      <div class="btn-group">
+          <a class="btn btn-round btn-info mb-1" type="button" href="" id="showreceipt"><i class="la la-file-pdf-o"></i> Show Receipt</a>
+      </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="editpayment"> Edit Payment</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-round btn-info mb-1" type="button" href="#" id="complitepayment"> Complite</a>
+        </div>
+
+
+    </div>
+    </div>
+    <section id="icon-tabs">
+        <div class="row">
+            <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title" id="invoicetype">Payment Details</h4><div id="invoicebade"></div><div>
+                      <a class="mycompheader heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                      <div class="heading-elements">
+                          <ul class="list-inline mb-0">
+                            <li><a data-action="collapse" id="mycompcollapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                      </div>
+                  </div>
+                  <div class="card-content collapse show" id="mycompdet">
+                      <div class="card-body">
+                        <div id="invoicebody" >
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div><b>PaymentID:</b> <div id="paymentid"></div></div>
+                              <div><b>Receipt Number: </b><div id="receiptnumber"></div></div>
+                                <div><b>Counterparty: </b><div id="counterparty"></div></div>
+                                <div><b>Amount: </b><div id="amount"></div></div>
+                                <div><b>VAT: </b><div id="vat"></div></div>
+                                <div><b>Totla Amount: </b><div id="totalamount"></div></div>
+                                <div><b>Payment Date:</b> <div id="paydate"></div></div>
+                                <div><b>Account Type:</b> <div id="acctype"></div></div>
+                                <div><b>AccountID:</b> <div id="acountid"></div></div>
+
+
+                              </div>
+                              <div class="col-md-6">
+                                <div><b>InvoiceID:</b> <div id="invoiceid"></div></div>
+                                <div><b>Created:</b> <div id="created"></div></div>
+                                <div><b>Created By:</b> <div id="createdby"></div></div>
+                                <div><b>Edited:</b> <div id="edited"></div></div>
+                                <div><b>Edited By:</b> <div id="editedby"></div></div>
+                                <div><b>Complited By:</b> <div id="complitedby"></div></div>
+                                <div><b>Description:</b> <div id="description"></div></div>
+                                <div><b>Comment:</b> <div id="comment"></div></div>
+                                </div>
+
+                          </div>
+
+                        </div>
+                        <div id="invoicecontent" class="table-responsive" index="1">
+                        <div class="mt-2"><h4>Payment Content</h4></div>
+                        <div>
+
+                          <table class="table mb-0">
+         <thead>
+           <tr>
+             <th>#</th>
+             <th >Description</th>
+             <th>Category</th>
+             <th >Amount</th>
+             <th >VAT %</th>
+             <th >VAT </th>
+             <th >Total Amount </th>
+             <th >is Comunity VAT?</th>
+             <th>Period</th>
+            <th >Basement</th>
+            <th >Comment</th>
+           </tr>
+         </thead>
+<tbody id="paymenttbody">
+
+
+  </tbody>
+</table>
+
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+          <div class="form-group">
+          <form action="#" class="dropzone dropzone-area" id="importpayment" >
+              <div class="dz-message">Drop Files Here To Upload</div>
+          </form>
+            </div>
+      </div>
+    </div>
+
+
+
+              </div>
+          </div>
+      </div>
+
+            </div>
+        </div>
+    </section>
+
+{{ end }}

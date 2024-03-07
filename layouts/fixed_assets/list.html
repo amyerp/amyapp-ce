@@ -1,0 +1,83 @@
+{{ define "main" }}
+<div class="app-content">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-2">
+                <h3 class="content-header-title mb-0">Fixed Assets</h3>
+                <div class="row breadcrumbs-top">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">Catalog
+                            </li>
+                            <li class="breadcrumb-item">Fixed Assets
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-6 col-12">
+                <div class="btn-group">
+                    <a class="btn btn-round btn-info mb-1" type="button" href="/add_fixed_asset"><i class="icon-cog3"></i> Add ...</a>
+                </div>
+
+
+            </div>
+              </div>
+            <div class="content-body">
+                <!-- Default styling start -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Fixed Assets</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                  <div class="table-responsive">
+                                    <table class="table mb-0 table-striped restable"
+                                    id="fatable"
+                                    data-height="450"
+                                    data-virtual-scroll="true"
+                                    data-resizable-columns-id="table"
+                                    data-resizable="true"
+                                    data-show-columns="true"
+                                    data-search="true"
+                                    data-show-toggle="true"
+                                    data-row-attributes="faAttributes">
+                                        <thead>
+                                            <tr>
+                                                <th  data-field="#" data-sortable="true"  data-resizable-column-id="#">#</th>
+                                                <th data-field="avatar" data-sortable="false"  data-resizable-column-id="avatar">Avatar</th>
+                                                <th data-field="Type" data-sortable="true"  data-resizable-column-id="Type">Type</th>
+                                                <th data-field="IncomDate" data-sortable="true"  data-resizable-column-id="IncomDate">Incoming Date</th>
+                                                <th data-field="LeaveDate" data-sortable="true"  data-resizable-column-id="LeaveDate">Leave Date</th>
+                                                <th data-field="PurchasedPrice" data-formatter="currencyFormatter" data-sortable="true"  data-resizable-column-id="PurchasedPrice">Purchased Price</th>
+                                                <th data-field="CurrentPrice" data-formatter="currencyFormatter" data-sortable="true"  data-resizable-column-id="CurrentPrice">Current Cost</th>
+                                                <th data-field="AmortisationPeriod" data-sortable="true"  data-resizable-column-id="AmortisationPeriod">Amortisation Period (years)</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                  </div>
+                                  <div class="tab-content">
+                                      <smal>Find <span id="findrecords"></span> records</smal>
+                                      </div>
+                                  </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+</div>
+{{ end }}
