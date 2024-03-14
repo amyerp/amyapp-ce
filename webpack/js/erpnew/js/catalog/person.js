@@ -119,19 +119,13 @@ export function addperson(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'person',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'catalog/person',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -149,19 +143,13 @@ export function delperson(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'person',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'catalog/person',
     type: "DELETE",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -175,11 +163,11 @@ export function delperson(args, lang, token) {
 //Important args: personID, file
 export function uploadpersonfile(file, formData, personid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
 
   formData.append("file", file);
-  formData.append("timestamp", timestamp);
+
 
   var jwttoken = "Bearer " + token;
 

@@ -8,7 +8,7 @@ There is functions for Auth Module
 //Important Args: uname, pass
 export function signin(args, lang) {
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 /*
   var req = {
 
@@ -42,7 +42,7 @@ export function signin(args, lang) {
 //Use two times. First for ask for a key, second time with a key for request a new password
 export function forgot(args, lang) {
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 /*
   var req = {
        param: 'forgot',

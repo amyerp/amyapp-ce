@@ -17,20 +17,14 @@ export function addaccounting(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       module: 'dictionary',
-       param: 'accounting',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+
 
    return $.ajax({
     url: SERVER_URL + 'dictionary/accounting',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

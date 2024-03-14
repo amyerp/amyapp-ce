@@ -77,19 +77,13 @@ export function addtransfer(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'transfer',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
-
+  
    return $.ajax({
     url: SERVER_URL + 'journals/transfer',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

@@ -33,19 +33,12 @@ export function addinvoicesettings(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
-
-  var req = {
-       param: 'invoice',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+  // var timestamp = Math.round(+new Date()/1000);
 
    return $.ajax({
     url: SERVER_URL + 'settings/invoice',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -80,19 +73,13 @@ export function addinvoiceemailsettings(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'invoiceemail',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'settings/invoiceemail',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

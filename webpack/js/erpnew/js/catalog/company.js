@@ -172,16 +172,10 @@ export function addcompany(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'company',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
-  var jsonreq = JSON.stringify(req);
+  var jsonreq = JSON.stringify(args);
    console.log("jsonreq: ", jsonreq)
 
    return $.ajax({
@@ -217,19 +211,14 @@ export function delcompany(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'company',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+  
 
    return $.ajax({
     url: SERVER_URL + 'catalog/company',
     type: "DELETE",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -243,7 +232,7 @@ export function delcompany(args, lang, token) {
 //Important args: companiID, file
 export function uploadcompanyfile(file, formData, companyid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   //var formData = new FormData();
   //formData.append('fname', fname);

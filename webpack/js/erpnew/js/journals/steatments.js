@@ -15,11 +15,11 @@ Authorisation required
 
 export function uploadsteatment(file, formData, companyid, type, typeid, year, month, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
 
   formData.append("file", file);
-  formData.append("timestamp", timestamp);
+
 
   var jwttoken = "Bearer " + token;
 

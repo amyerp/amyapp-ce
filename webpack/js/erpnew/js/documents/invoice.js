@@ -38,19 +38,14 @@ export function addinvoice(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'invoice',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+
 
    return $.ajax({
     url: SERVER_URL + 'documents/invoice',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -68,24 +63,18 @@ export function compliteinvoice(invoiceid, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   var args = {
     action: "complite",
     invoiceid: invoiceid
   }
 
-  var req = {
-       param: 'invoice',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'documents/invoice',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -102,24 +91,18 @@ export function markassent(invoiceid, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   var args = {
     action: "marksent",
     invoiceid: invoiceid
   }
 
-  var req = {
-       param: 'invoice',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'documents/invoice',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -133,7 +116,7 @@ export function markassent(invoiceid, lang, token) {
 //Important args: companiID, file
 export function uploadinvoice(file, formData, invoiceid, companyid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
 
   formData.append("file", file);

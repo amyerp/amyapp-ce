@@ -17,19 +17,13 @@ export function addmail(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'correspondence',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'journals/correspondence',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -43,7 +37,7 @@ export function addmail(args, lang, token) {
 //Important args: companiID,  file, AgreementID
 export function uploadmailfile(file, formData, companyid, mailid, type, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   //var formData = new FormData();
   //formData.append('fname', fname);

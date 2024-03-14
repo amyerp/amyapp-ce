@@ -14,19 +14,14 @@ export function addcountry(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'country',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+
 
    return $.ajax({
     url: SERVER_URL + 'dictionary/country',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -60,19 +55,13 @@ export function addcity(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'cities',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'dictionary/cities',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

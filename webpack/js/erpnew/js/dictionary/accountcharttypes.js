@@ -14,19 +14,14 @@ export function addact(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'accountcharttype',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+  
 
    return $.ajax({
     url: SERVER_URL + 'dictionary/accountcharttype',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

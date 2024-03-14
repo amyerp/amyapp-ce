@@ -94,11 +94,11 @@ export function showpaymentreceipt(paymentid, fileid, companyid, token) {
 //Important args: companiID, file
 export function uploadipaymentreceipt(file, formData, paymentid, companyid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
 
   formData.append("file", file);
-  formData.append("timestamp", timestamp);
+
   formData.append("paymentid", paymentid);
   formData.append("companyid", companyid);
 
@@ -127,19 +127,13 @@ export function addpayment(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'payment',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'journals/payment',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

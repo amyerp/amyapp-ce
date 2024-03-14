@@ -57,19 +57,14 @@ export function addgl(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'generalledger',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+
 
    return $.ajax({
     url: SERVER_URL + 'accounting/generalledger',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -134,18 +129,13 @@ export function delgl(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
-  var req = {
-       param: 'generalledger',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+  // var timestamp = Math.round(+new Date()/1000);
+  
 
    return $.ajax({
     url: SERVER_URL + 'accounting/generalledger',
     type: "DELETE",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

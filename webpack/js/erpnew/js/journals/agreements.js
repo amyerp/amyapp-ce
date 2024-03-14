@@ -17,19 +17,14 @@ export function addagreement(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'agreements',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
+
 
    return $.ajax({
     url: SERVER_URL + 'journals/agreements',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -43,7 +38,7 @@ export function addagreement(args, lang, token) {
 //Important args: companiID,  file, AgreementID
 export function uploadagreementfile(file, formData, companyid, agreementid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   //var formData = new FormData();
   //formData.append('fname', fname);
@@ -158,24 +153,17 @@ export function agreementswichactive(agreementid, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   var args = {
     action: "switchactive",
     agreementid: agreementid
   }
 
-  var req = {
-       param: 'agreement',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
-
    return $.ajax({
     url: SERVER_URL + 'journals/agreement',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -190,24 +178,17 @@ export function agreementexpire(agreementid, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
   var args = {
     action: "expire",
     agreementid: agreementid
   }
 
-  var req = {
-       param: 'agreement',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
-
    return $.ajax({
     url: SERVER_URL + 'journals/agreement',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,

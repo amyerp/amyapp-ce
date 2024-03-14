@@ -16,19 +16,13 @@ export function addincomeinvoice(args, lang, token) {
   var jwttoken = "Bearer " + token;
 
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
-  var req = {
-       param: 'incoming_invoice',
-       args: args,
-       lang: lang,
-       timestamp: timestamp
-   };
 
    return $.ajax({
     url: SERVER_URL + 'journals/incoming_invoice',
     type: "POST",
-    data: JSON.stringify(req),
+    data: JSON.stringify(args),
     headers: {
            'content-type': 'application/json',
            'Authorization': jwttoken,
@@ -172,11 +166,11 @@ export function showincomeinvoices(companyid, token, limit, offset, filters) {
 //Important args: companiID, file
 export function uploadincomeinvoice(file, formData, invoiceid, companyid, token){
 
-  var timestamp = Math.round(+new Date()/1000);
+  // var timestamp = Math.round(+new Date()/1000);
 
 
   formData.append("file", file);
-  formData.append("timestamp", timestamp);
+  
   formData.append("invoiceid", invoiceid);
   formData.append("companyid", companyid);
 
